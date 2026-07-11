@@ -1,0 +1,15 @@
+#cup{
+    display: inline;
+    width: 25px  ;
+}
+.basket{
+    font-size: 22px;
+}
+.beans{
+    font-size: 15px;
+}
+#bg{
+    background: url(../pic/Gemini_Generated_Image_81sny281sny281sn.png);
+    background-repeat: no-repeat;
+    width: 100%;
+}

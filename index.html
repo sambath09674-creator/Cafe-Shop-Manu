@@ -2,28 +2,227 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
-    <title>Smokey Brand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
-    <!-- Navbar -->
+    <header class="text-white bg-amber-50">
+      <nav class="relative top-0 start-0 z-20 w-full px-3 sm:px-6">
+        <div
+          class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3 sm:p-4"
+        >
+          <a href="#" class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+            <img
+              src="./pic/Screenshot 2026-07-11 152105.png"
+              class="h-8 sm:h-10 w-auto"
+              alt="Smokey Brand Logo"
+            />
+            <span
+              class="self-center text-base sm:text-xl font-semibold text-black whitespace-nowrap"
+            >
+              Smokey Brand
+            </span>
+          </a>
 
-    <!-- End of Navbar -->
-    <!-- Home -->
+          <div class="flex items-center space-x-2 md:order-2 shrink-0">
+            <button
+              type="button"
+              class="inline-flex items-center gap-1.5 rounded-lg border border-black px-2.5 py-1.5 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium text-black transition-all hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black"
+            >
+              <svg
+                class="h-4 w-4 sm:h-5 sm:w-5 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+                aria-hidden="true"
+              >
+                <path
+                  d="M152-16c-13.3 0-24 10.7-24 24 0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C183.5 31.7 176 24.1 176 8 176-5.3 165.3-16 152-16zM96 192c-17.7 0-32 14.3-32 32l0 192c0 53 43 96 96 96l192 0c41.8 0 77.4-26.7 90.5-64l5.5 0c70.7 0 128-57.3 128-128S518.7 192 448 192L96 192zM448 384l0-128c35.3 0 64 28.7 64 64s-28.7 64-64 64zM288 8c0-13.3-10.7-24-24-24S240-5.3 240 8c0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C295.5 31.7 288 24.1 288 8z"
+                />
+              </svg>
+              <span class="whitespace-nowrap">Your Basket</span>
+            </button>
 
-    <!-- End of Home -->
-    <!-- Grab bag -->
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-5 w-5 sm:h-6 sm:w-6"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M5 7h14M5 12h14M5 17h14"
+                />
+              </svg>
+            </button>
+          </div>
 
-    <!-- End of Grab bag -->
-    <!-- Better Together -->
+          <div
+            class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+            id="navbar-sticky"
+          >
+            <ul
+              class="mt-4 flex flex-col items-center font-medium md:mt-0 md:flex-row md:space-x-2 rtl:space-x-reverse"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
+                  >Coffee Hub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
+                  >Our Story</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="bg-linear-to-t from-amber-200 via-amber-100 to-amber-50">
+      <section class="max-w-7xl px-10 mx-auto md:px-25 lg:px-30 py-12">
+        <div
+          id="group-header"
+          class="grid grid-cols-1 md:grid-cols-2 items-center gap-8"
+        >
+          <div class="flex flex-col justify-center space-y-6">
+            <h3 class="text-xl tracking-wider text-gray-800 font-medium">
+              The Smokey
+            </h3>
 
-    <!-- End of Better Together -->
-    <!-- Repurposed -->
+            <h1
+              class="text-6xl md:text-7xl font-bold font-serif tracking-tight text-black leading-none"
+            >
+              CAFFEE
+            </h1>
 
-    <!-- End of Repurposed -->
-    <!-- Footer -->
+            <p class="text-gray-700 text-base leading-relaxed max-w-md pt-2">
+              Discover the Essence of Exquisite Caffee Beans. Each bean is
+              meticulously sourced from the finest coffee-growing regions.
+            </p>
 
-    <!-- End of Footer -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-white bg-[#3e3431] hover:bg-gray-500 transition-colors font-medium rounded-full text-sm px-6 py-3 shadow-sm"
+              >
+                <span>🍵</span>
+                <span>Shop Beans</span>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-white bg-[#ba9368] hover:bg-gray-500 transition-colors font-medium rounded-full text-sm px-6 py-3 shadow-sm"
+              >
+                <span>❤️</span>
+                <span>Our Cafes</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center py-6">
+            <div
+              class="relative w-60 h-60 md:w-75 md:h-75 rounded-full bg-[#3b2d2a] flex items-center justify-center "
+            >
+              <img
+                class="w-full h-auto object-contain transform scale-110"
+                src="./pic/belalhossainseo-coffee-cup-8998251.png"
+                alt="Coffee Cup Splash"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      class="min-h-16 bg-orange-950 flex flex-col sm:flex-row items-center justify-around text-white p-4 gap-2 text-center"
+    >
+      <p>Get 10% Off Your First Order</p>
+      <p>Free Delivery in Cambodia</p>
+      <p>Taste For Everyone</p>
+    </div>
+
+    <main class="">
+      <section class="bg-[#b8855c] text-white 8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center"
+          id="bg"
+        >
+          <!-- Left Column: Coffee Bag Image -->
+          <div class="flex justify-center items-center">
+            <img
+              src="./pic/Gemini_Generated_Image_9juj0v9juj0v9juj.png"
+              alt="Coffee Bag"
+              class="w-200 object-contain drop-shadow-lg"
+            />
+          </div>
+
+          <!-- Right Column: Content & CTA -->
+          <div class="space-y-4 max-w-lg container p-10">
+            <h2
+              class="text-3xl md:text-4xl font-light tracking-wide text-white/90"
+            >
+              Grab a bag of our
+            </h2>
+            <h1
+              class="text-5xl md:text-6xl font-bold tracking-tight text-white"
+            >
+              Best Brew!
+            </h1>
+
+            <p class="text-white/90 text-base leading-relaxed pt-2">
+              Take a piece of The Tavern home with you. Every 12oz bag of our
+              in-house roasted signature coffee fuels more than your morning -
+              it powers job training, mentorship, and hope right here in
+              Buckeye.
+              <strong class="font-bold text-white"
+                >Brew boldly. Give Generously.</strong
+              >
+            </p>
+
+            <hr class="border-white/40 my-4" />
+
+            <div class="flex items-center gap-2 text-white/90 text-sm py-1">
+              <span>🍵</span>
+              <span>12 oz bag - 17-21 servings</span>
+            </div>
+
+            <hr class="border-white/40 my-4" />
+
+            <a
+              href="#"
+              class="inline-block bg-[#a25838] hover:bg-[#8b4a2e] text-white font-medium text-base px-6 py-2.5 rounded-md shadow transition-colors mt-2"
+            >
+              $14 | Order Today
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>

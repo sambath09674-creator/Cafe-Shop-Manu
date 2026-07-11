@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "project",
   "version": "1.0.0",
   "description": "",
@@ -12,6 +13,12 @@
   "type": "commonjs",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.2",
+=======
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "flowbite": "^4.0.2",
+    "preline": "^4.2.0",
+>>>>>>> 25007e1 (First)
     "tailwindcss": "^4.3.2"
   }
 }

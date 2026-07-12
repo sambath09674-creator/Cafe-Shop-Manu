@@ -5,12 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              mono: ['"Roboto Mono"', "monospace"],
+            },
+            colors: {
+              cream: "#efe2bd",
+              espresso: "#3b2d2d",
+              walnut: "#5a4634",
+              caramel: "#B78358",
+              caramelDark: "#8f6544",
+              card: "#F5E8C7",
+              cardBorder: "#8c7b6b",
+              footer: "#3F3131",
+            },
+          },
+        },
+      };
+    </script>
     <!-- <link rel="stylesheet" href="./src/output.css" /> -->
     <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
-    <header class="text-white bg-amber-50">
+    <!-- Navbar -->
+    <header class="text-white bg-cream">
       <nav class="relative top-0 start-0 z-20 w-full px-3 sm:px-6">
         <div
           class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3 sm:p-4"
@@ -80,14 +102,14 @@
             >
               <li>
                 <a
-                  href="#"
+                  href="./index.html"
                   class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./html/cafe_hub.html"
                   class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
                   >Coffee Hub</a
                 >
@@ -104,6 +126,7 @@
         </div>
       </nav>
     </header>
+    <!-- End of Navbar -->
     <div class="bg-linear-to-t from-amber-200 via-amber-100 to-amber-50">
       <section class="max-w-7xl px-10 mx-auto md:px-25 lg:px-30 py-12">
         <div

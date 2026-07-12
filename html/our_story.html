@@ -1,26 +1,364 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
-    <title>Smokey Brand</title>
-    <link rel="stylesheet" href="./src/output.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        mono: ['"Roboto Mono"', 'monospace'],
+                    },
+                    colors: {
+                        cream: '#efe2bd',
+                        espresso: '#3b2d2d',
+                        walnut: '#5a4634',
+                        caramel: '#B78358',
+                        caramelDark: '#8f6544',
+                        card: '#F5E8C7',
+                        cardBorder: '#8c7b6b',
+                        footer: '#3F3131',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-[#222] font-sans">
 
-    <!-- End of Navbar -->
-    <!-- The story behind -->
+<div class="w-[90%] mx-auto py-[30px]">
 
-    <!-- End of The story behind -->
-    <!-- Contect Us -->
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center mb-[60px] flex-wrap gap-5">
+        <div class="flex items-center gap-[10px]">
+            <i class="fa-solid fa-seedling text-[28px] text-walnut"></i>
+            <h2 class="text-[28px] font-semibold text-espresso">Smokey Brand</h2>
+        </div>
 
-    <!-- End of Contect Us -->
-    <!-- Meet our team -->
+        <ul class="flex items-center gap-[15px] list-none">
+            <li><a href="index.html" class="block no-underline text-espresso px-[18px] py-[7px] rounded-lg text-[17px] font-medium transition-all duration-300 hover:bg-espresso hover:text-[#f5ebd4]">Home</a></li>
+            <li><a href="cafe_hub.html" class="block no-underline text-espresso px-[18px] py-[7px] rounded-lg text-[17px] font-medium transition-all duration-300 hover:bg-espresso hover:text-[#f5ebd4]">Coffee Hub</a></li>
+            <li><a href="story.html" class="block no-underline px-[18px] py-[7px] rounded-lg text-[17px] font-medium transition-all duration-300 bg-espresso text-[#f5ebd4]">Our Story</a></li>
+        </ul>
 
-    <!-- End of Meet our team -->
-    <!-- Footer -->
+        <button class="px-[25px] py-3 border-2 border-espresso rounded-[35px] bg-transparent text-espresso text-[17px] font-semibold cursor-pointer transition-all duration-300 hover:bg-espresso hover:text-white">
+            <i class="fa-solid fa-mug-hot"></i>
+            Your Basket
+        </button>
+    </nav>
 
-    <!-- End of Footer -->
-  </body>
+    <!-- Story Section -->
+    <section class="flex flex-col md:flex-row justify-between items-center gap-[60px] mb-[80px]">
+
+        <div class="flex-1">
+
+            <h1 class="text-[60px] font-display font-normal leading-tight">The Story Behind</h1>
+
+            <h2 class="mt-[10px] mb-[25px] text-[50px] font-display">The Tavern</h2>
+
+            <p class="font-mono leading-[1.8] mb-[15px] text-[18px] text-[#444]">
+                At Brew Haven, we believe that every cup of coffee brings
+                people together. Our coffee was created with a passion for
+                serving freshly brewed coffee made from premium beans and
+                quality ingredients.
+            </p>
+
+            <p class="font-mono leading-[1.8] mb-[15px] text-[18px] text-[#444]">
+                We aim to provide a warm and welcoming space where you can
+                relax, enjoy delicious drinks and desserts, and create
+                unforgettable moments with family and friends.
+            </p>
+
+            <p class="font-mono leading-[1.8] mb-[15px] text-[18px] text-[#444]">
+                Every cup is crafted with care, bringing comfort,
+                flavor, and happiness to every visit.
+            </p>
+
+            <p class="font-mono leading-[1.8] mb-[15px] text-[18px] text-[#444]">
+                Brew Haven — Fresh Coffee, Fresh Moments.
+            </p>
+
+        </div>
+
+        <div class="flex-1 text-right">
+            <img src="../pic/Screenshot 2026-07-10 161424.png" alt="Coffee Shop" class="w-full rounded-[5px]">
+        </div>
+
+    </section>
+
+
+    <!-- Timeline -->
+
+    <div class="text-center mb-[35px] font-bold">
+        <span>Our Journey</span>
+    </div>
+
+    <div class="relative flex flex-wrap md:flex-nowrap justify-between items-start gap-y-[50px]">
+
+        <div class="absolute top-[35px] left-0 w-full h-[2px] bg-[#999]"></div>
+
+        <div class="relative text-center w-1/2 md:w-1/4 z-[2]">
+            <div class="w-[70px] h-[70px] rounded-full bg-[#cbb08b] flex justify-center items-center mx-auto mb-[15px] text-[28px]">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3 class="mb-[8px]">2018</h3>
+            <p class="text-[#555]">The Beginning</p>
+        </div>
+
+        <div class="relative text-center w-1/2 md:w-1/4 z-[2]">
+            <div class="w-[70px] h-[70px] rounded-full bg-[#f2f2f2] flex justify-center items-center mx-auto mb-[15px] text-[28px]">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <h3 class="mb-[8px]">2019</h3>
+            <p class="text-[#555]">First Coffee</p>
+        </div>
+
+        <div class="relative text-center w-1/2 md:w-1/4 z-[2]">
+            <div class="w-[70px] h-[70px] rounded-full bg-[#f2f2f2] flex justify-center items-center mx-auto mb-[15px] text-[28px]">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="mb-[8px]">2022</h3>
+            <p class="text-[#555]">Growing Together</p>
+        </div>
+
+        <div class="relative text-center w-1/2 md:w-1/4 z-[2]">
+            <div class="w-[70px] h-[70px] rounded-full bg-[#f2f2f2] flex justify-center items-center mx-auto mb-[15px] text-[28px]">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h3 class="mb-[8px]">2026</h3>
+            <p class="text-[#555]">Still Brewing</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Contact Section -->
+<section class="w-[90%] mx-auto my-[100px] flex flex-col md:flex-row justify-between items-start gap-[80px]">
+
+    <!-- Left Side -->
+    <div class="flex-1 w-full">
+
+        <h1 class="font-display text-[55px] mb-[30px]">Contact Us</h1>
+
+        <form class="flex flex-col">
+
+            <label class="text-[22px] mb-[10px] mt-[15px]">Name</label>
+            <input type="text" placeholder="Your Name" class="w-full h-[60px] border-none outline-none bg-[#d9d9d9] rounded-[35px] px-[25px] text-[18px]">
+
+            <label class="text-[22px] mb-[10px] mt-[15px]">Phone Number</label>
+            <input type="text" placeholder="Your Phone" class="w-full h-[60px] border-none outline-none bg-[#d9d9d9] rounded-[35px] px-[25px] text-[18px]">
+
+            <label class="text-[22px] mb-[10px] mt-[15px]">Gmail</label>
+            <input type="email" placeholder="Your Email" class="w-full h-[60px] border-none outline-none bg-[#d9d9d9] rounded-[35px] px-[25px] text-[18px]">
+
+            <label class="text-[22px] mb-[10px] mt-[15px]">Message</label>
+            <textarea placeholder="Your Message" class="w-full h-[170px] border-none outline-none resize-none bg-[#d9d9d9] rounded-[35px] px-[25px] py-[20px] text-[18px]"></textarea>
+
+            <button type="submit" class="w-[180px] mt-[30px] p-[14px] border-none rounded-[15px] bg-caramel text-white text-[25px] cursor-pointer transition-all duration-300 hover:bg-caramelDark">Submit</button>
+
+        </form>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="flex-1 w-full bg-caramel rounded-[45px] p-[40px]">
+
+        <h2 class="text-center text-[40px] mb-[30px]">Store Information</h2>
+
+        <div class="mb-[25px]">
+
+            <p class="flex items-center gap-[18px] mb-[18px] text-[22px]">
+                <i class="fa-solid fa-location-dot w-[45px] h-[45px] bg-white text-black rounded-full flex justify-center items-center"></i>
+                Phnom Penh, Cambodia
+            </p>
+
+            <p class="flex items-center gap-[18px] mb-[18px] text-[22px]">
+                <i class="fa-solid fa-phone w-[45px] h-[45px] bg-white text-black rounded-full flex justify-center items-center"></i>
+                +855 12 345 678
+            </p>
+
+            <p class="flex items-center gap-[18px] mb-[18px] text-[22px]">
+                <i class="fa-solid fa-envelope w-[45px] h-[45px] bg-white text-black rounded-full flex justify-center items-center"></i>
+                cafe@gmail.com
+            </p>
+
+            <p class="flex items-center gap-[18px] mb-[18px] text-[22px]">
+                <i class="fa-regular fa-clock w-[45px] h-[45px] bg-white text-black rounded-full flex justify-center items-center"></i>
+                Open Daily
+            </p>
+
+            <p class="ml-[65px]">7:00 AM - 8:30 PM</p>
+
+        </div>
+
+        <img src="../pic/images.jpg" alt="Map" class="w-full h-[220px] object-cover rounded-[10px]">
+
+    </div>
+
+</section>
+
+<!-- Team Section -->
+<section class="w-[90%] mx-auto my-[100px]">
+
+    <h1 class="font-display text-[58px] text-[#2f2320] mb-[30px]">Meet Our Team</h1>
+
+    <p class="w-full md:w-[95%] text-[20px] leading-[2] text-[#333] mb-[60px]">
+        Behind every great cup of coffee is a passionate team dedicated to creating
+        the best experience for our customers. From skilled baristas to friendly
+        staff, we work together to serve quality coffee, delicious treats,
+        and warm hospitality every day.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[40px]">
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team1.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Team</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Sambath</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team3.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Pouch</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Mary</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team2.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Samnang</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Punharith</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team4.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Sen</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Piseth</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team5.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Chao</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Sothearith</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team6.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Sun</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Rathanak Sathya</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team7.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Vy</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Thavin</p>
+            </div>
+        </div>
+
+        <div class="bg-card border-2 border-cardBorder rounded-[30px] overflow-hidden transition-transform duration-300 hover:-translate-y-[10px] hover:shadow-2xl">
+            <img src="../pic/team8.jpg" alt="" class="w-full h-[200px] object-cover rounded-t-[28px]">
+            <div class="p-[18px]">
+                <h3 class="text-[32px] font-display text-[#2d2222] mb-[10px]">Hav</h3>
+                <p class="text-[28px] text-[#3d2d2d]">Chhanun</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="bg-footer text-[#f5f5f5] px-[8%] pt-[60px] pb-[20px]">
+
+    <div class="flex flex-wrap justify-between items-start gap-[40px]">
+
+        <!-- Logo -->
+        <div class="text-center md:text-left">
+            <img src="../pic/Logo.png" alt="The Tavern" class="w-[180px]">
+        </div>
+
+        <!-- Contact -->
+        <div class="flex flex-col gap-[10px] min-w-[160px]">
+
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">The Tavern Coffee House</p>
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">12302 Buckeye Rd</p>
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">Cleveland, OH 44120</p>
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">(216) 291 - 7680</p>
+
+            <h4 class="mt-[10px] mb-[5px]">Open Monday-Friday</h4>
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">8am - 1pm</p>
+
+            <div class="mt-[15px]">
+                <a href="#" class="w-[38px] h-[38px] inline-flex justify-center items-center border border-white/30 rounded-full text-white mr-[10px] transition-all duration-300 hover:bg-[#c69c6d] hover:border-[#c69c6d]"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-[38px] h-[38px] inline-flex justify-center items-center border border-white/30 rounded-full text-white mr-[10px] transition-all duration-300 hover:bg-[#c69c6d] hover:border-[#c69c6d]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-[38px] h-[38px] inline-flex justify-center items-center border border-white/30 rounded-full text-white mr-[10px] transition-all duration-300 hover:bg-[#c69c6d] hover:border-[#c69c6d]"><i class="fab fa-twitter"></i></a>
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-col gap-[10px] min-w-[160px]">
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Home</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Our Story</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Mission</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Vision</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Values</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Pay It Forward</a>
+        </div>
+
+        <!-- Shop -->
+        <div class="flex flex-col gap-[10px] min-w-[160px]">
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Order Online</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Full Menu</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Tavern Merch</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Host an Event</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">The Drip</a>
+            <a href="#" class="no-underline text-[#ddd] text-[15px] transition-colors duration-300 hover:text-[#c69c6d]">Donate</a>
+        </div>
+
+        <!-- About -->
+        <div class="flex flex-col gap-[10px] max-w-[280px]">
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">
+                Once a neighborhood bar, now a nonprofit coffeehouse,
+                The Tavern is where strong coffee fuels stronger careers
+                and the strongest community.
+            </p>
+            <p class="text-[#ddd] leading-[1.8] text-[15px]">
+                Join us in transforming Buckeye one cup,
+                one connection at a time.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-[40px] border-t border-white/20 pt-[20px] text-center">
+        <p class="text-[14px] text-[#ccc]">
+            ©2026 The Tavern Coffee House. All Rights Reserved.
+            Privacy Policy | Terms of Use | Refund Policy
+        </p>
+    </div>
+
+</footer>
+
+</body>
 </html>

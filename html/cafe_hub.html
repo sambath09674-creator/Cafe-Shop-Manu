@@ -2,25 +2,1122 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
-    <title>Smokey Brand</title>
-    <link rel="stylesheet" href="./src/output.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smokey Brand - Enjoy Your Coffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              slab: ['"Alfa Slab One"', "cursive"],
+            },
+            colors: {
+              cream: "#efe8d4",
+              espresso: "#111111",
+              btnDark: "#2c2520",
+              accent: "#e58f27",
+              cardBrown: "#bfa38a",
+              caramel: "#B78358",
+              footerBg: "#3F3131",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <!-- Navbar -->
+  <body class="bg-cream font-sans text-espresso">
+    <div class="px-6 py-8 md:px-12 lg:px-20">
+      <!-- Navbar -->
+      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
+          <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
+        </div>
 
-    <!-- End of Navbar -->
-    <!-- Top Page -->
+        <ul class="flex list-none items-center gap-4">
+          <li>
+            <a
+              href="home.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="cafe_hub.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="our.story.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Our Story</a
+            >
+          </li>
+        </ul>
 
-    <!-- End of Top Page -->
-    <!-- Menu -->
+        <button
+          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white"
+        >
+          <i class="fa-solid fa-mug-hot"></i>
+          Your Basket
+        </button>
+      </nav>
 
-    <!-- End of Menu -->
-    <!-- Button of Page -->
+      <!-- Hero -->
+      <main
+        class="grid grid-cols-1 items-center gap-12 text-center md:grid-cols-2 md:text-left"
+      >
+        <div>
+          <h1
+            class="mb-4 font-slab text-3xl font-normal leading-snug tracking-wide md:text-[2.8rem]"
+          >
+            ENJOY YOUR
+            <span class="text-accent" style="-webkit-text-stroke: 0.5px #111"
+              >COFFEE</span
+            ><br />
+            BEFORE YOUR ACTIVITY
+          </h1>
+          <p class="mb-7 text-lg font-medium leading-relaxed">
+            boost your productivity and build your mood with a glass of coffee
+            <i
+              class="fa-solid fa-seedling ml-1 rotate-[25deg] text-[#8c6d53]"
+            ></i>
+          </p>
 
-    <!-- End of Button of Page -->
-    <!-- Footer -->
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 rounded-full bg-btnDark px-6 py-3 text-sm font-medium text-white shadow-md transition hover:-translate-y-0.5"
+          >
+            Order Now <i class="fa-solid fa-cart-shopping"></i>
+          </a>
 
-    <!-- End of Footer -->
+          <div class="mt-14 flex justify-center gap-8 md:justify-start">
+            <div class="flex items-center gap-2">
+              <div class="text-2xl text-accent">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div class="text-left text-xs font-bold leading-tight">
+                Premium<br />Quality beans
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="text-2xl text-accent">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="text-left text-xs font-bold leading-tight">
+                Fast<br />Delivery
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="text-2xl text-accent">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+              </div>
+              <div class="text-left text-xs font-bold leading-tight">
+                Fresh<br />100%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <img
+            src="../pic/belalhossainseo-coffee-cup-8998251.png"
+            alt="Coffee Splash"
+            class="w-full max-w-md"
+          />
+        </div>
+      </main>
+
+      <!-- Menu tabs -->
+      <section class="mt-16 text-center md:text-left">
+        <h2 class="mb-6 text-2xl font-semibold">Our Menu</h2>
+        <div class="flex flex-wrap justify-center gap-6 md:justify-start">
+          <button
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-semibold text-espresso shadow"
+          >
+            <i class="fa-solid fa-mug-saucer text-[#a47e65]"></i> Coffee
+          </button>
+          <button
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm"
+          >
+            <i class="fa-solid fa-blender text-[#a47e65]"></i> Matcha
+          </button>
+          <button
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm"
+          >
+            <i class="fa-solid fa-bread-slice text-[#a47e65]"></i> Crosong
+          </button>
+        </div>
+      </section>
+
+      <!-- Coffee Menu -->
+      <section class="mt-16">
+        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+          COFFEE MENU
+        </h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1510972527409-ace01d457f43?w=400"
+                alt="Espresso"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Espresso</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                A rich, concentrated shot of coffee.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400"
+                alt="Americano"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Americano</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Espresso mixed with hot water for a smooth taste.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=400"
+                alt="Cappuccino"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Cappuccino</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Espresso with steamed milk and thick milk foam.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400"
+                alt="Café Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Café Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Espresso with steamed milk and a light layer of foam.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Matcha Menu -->
+      <section class="mt-16">
+        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+          MATCHA MENU
+        </h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400"
+                alt="Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Earthy, creamy, slightly bitter with a smooth milk finish.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.9 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400"
+                alt="Iced Matcha Latte"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Iced Matcha Latte</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pastries -->
+      <section class="mt-16">
+        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+          PASTRIES
+        </h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400"
+                alt="Blueberry Muffin"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Blueberry Muffin</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Very popular combination because the tastes balance each other
+                well.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?w=400"
+                alt="Club Sandwich"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Club Sandwich</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Refreshing, creamy, and lightly sweet with a fresh green tea
+                flavor.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400"
+                alt="Donuts"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Donuts</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Tangy, citrusy, refreshing, and slightly earthy. Perfect for hot
+                weather.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400"
+                alt="Cookies"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Cookies</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Tangy, citrusy, refreshing, and slightly earthy. Perfect for hot
+                weather.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400"
+                alt="Croissant"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Croissant</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Very popular combination because the tastes balance each other
+                well.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col justify-between rounded-3xl bg-cardBrown p-3 shadow-sm"
+          >
+            <div class="relative h-40 overflow-hidden rounded-2xl">
+              <span
+                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                >4.8 ★</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400"
+                alt="Grilled Cheese"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-1.5 p-2 pt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold">Grilled Cheese</h3>
+                <span class="text-lg font-bold text-white">$5.99</span>
+              </div>
+              <p class="min-h-[34px] text-sm leading-tight text-[#f5f0eb]">
+                Earthy, creamy, slightly bitter with a smooth milk finish.
+              </p>
+              <div class="mt-2 flex items-center justify-between">
+                <div class="flex gap-1.5">
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Hot</span
+                  >
+                  <span
+                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    >Ice</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 rounded-full bg-btnDark px-3.5 py-1.5 text-xs font-semibold text-white transition hover:scale-105"
+                >
+                  Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews & Why choose us -->
+      <section class="mt-20 grid grid-cols-1 gap-16 lg:grid-cols-2">
+        <div>
+          <h3 class="mb-6 text-lg font-bold tracking-wide">CUSTOMER REVIEWS</h3>
+          <div class="grid grid-cols-1 gap-6">
+            <div class="rounded-2xl bg-white p-5 shadow-sm">
+              <div class="mb-2 text-accent">★★★★★</div>
+              <p class="mb-4 text-sm italic text-gray-700">
+                "The best coffee I've ever had! Absolutely amazing taste."
+              </p>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/100?img=33"
+                  alt="John D."
+                  class="h-9 w-9 rounded-full object-cover"
+                />
+                <span class="text-sm font-semibold">—John D.</span>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white p-5 shadow-sm">
+              <div class="mb-2 text-accent">★★★★★</div>
+              <p class="mb-4 text-sm italic text-gray-700">
+                Fast delivery and great service. Highly recommended! (TM)
+              </p>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/100?img=47"
+                  alt="Sarah M."
+                  class="h-9 w-9 rounded-full object-cover"
+                />
+                <span class="text-sm font-semibold">—Sarah M.</span>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white p-5 shadow-sm">
+              <div class="mb-2 text-accent">★★★★★</div>
+              <p class="mb-4 text-sm italic text-gray-700">
+                "My favorite place to order coffee. Love it!"
+              </p>
+              <div class="flex items-center gap-3">
+                <img
+                  src="https://i.pravatar.cc/100?img=12"
+                  alt="David R."
+                  class="h-9 w-9 rounded-full object-cover"
+                />
+                <span class="text-sm font-semibold">—David R.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-6 text-lg font-bold tracking-wide">WHY CHOOSE US?</h3>
+          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+            >
+              <div
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+              >
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Premium Beans</h4>
+                <p class="text-sm text-gray-600">
+                  We use the best quality coffee beans.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+            >
+              <div
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+              >
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Fast Delivery</h4>
+                <p class="text-sm text-gray-600">
+                  Get your coffee delivered fast.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+            >
+              <div
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+              >
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Best Quality</h4>
+                <p class="text-sm text-gray-600">
+                  Quality is our first priority.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+            >
+              <div
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Made with Love</h4>
+                <p class="text-sm text-gray-600">
+                  Every cup is made with passion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ FOOTER (shared across all pages) ============ -->
+    <footer
+      class="bg-footerBg px-6 pt-14 pb-6 text-[#f5f5f5] md:px-16 lg:px-20"
+    >
+      <div class="flex flex-wrap justify-between gap-10">
+        <div class="flex max-w-[180px] items-center justify-center">
+          <img
+            src="../pic/Logo.png"
+            alt="The Tavern Coffeehouse Logo"
+            class="h-auto w-full object-contain"
+          />
+        </div>
+
+        <div
+          class="flex min-w-[180px] flex-col gap-2 text-sm leading-relaxed text-gray-300"
+        >
+          <p>The Tavern Coffee House</p>
+          <p>12302 Buckeye Rd</p>
+          <p>Cleveland, OH 44120</p>
+          <p>(216) 291 - 7680</p>
+          <h4 class="mt-2 font-semibold text-white">Open Monday-Friday</h4>
+          <p>8am - 1pm</p>
+          <div class="mt-3 flex gap-3">
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
+          <a href="home.html" class="hover:text-caramel">Home</a>
+          <a href="our.story.html" class="hover:text-caramel">Our story</a>
+          <a href="#" class="hover:text-caramel">Mission</a>
+          <a href="#" class="hover:text-caramel">Vision</a>
+          <a href="#" class="hover:text-caramel">Values</a>
+          <a href="#" class="hover:text-caramel">Pay it forward</a>
+        </div>
+
+        <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
+          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
+          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
+          <a href="#" class="hover:text-caramel">Tavern merch</a>
+          <a href="#" class="hover:text-caramel">Host an event</a>
+          <a href="#" class="hover:text-caramel">The drip</a>
+          <a href="#" class="hover:text-caramel">Donate</a>
+        </div>
+
+        <div class="max-w-xs text-sm leading-relaxed text-gray-300">
+          <p>
+            Once a neighborhood bar, now a nonprofit coffeehouse, The Tavern is
+            where strong coffee fuels stronger careers and the strongest
+            community. Join us in transforming Buckeye one cup, one connection
+            at a time.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="mt-10 border-t border-white/20 pt-5 text-center text-xs leading-relaxed text-gray-400"
+      >
+        <p>
+          ©2026 The Tavern Coffee House. All Right Reserved. Any unauthorized
+          duplication of content herein will result in prosecution. The Tavern
+          Coffee House is a 501(c)(3) Public Charity - EIN 84-2004511 are tax -
+          deductible.
+          <a href="#" class="underline hover:text-caramel">Privacy Policy</a> |
+          <a href="#" class="underline hover:text-caramel">Term of use</a> |
+          <a href="#" class="underline hover:text-caramel">Refund Policy</a>.
+          Coffee House Website Designed &amp; Developed by Baruh Design &amp;
+          Co.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,338 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Story | Smokey Brand</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        display: ['"Playfair Display"', 'serif'],
-                        mono: ['"Roboto Mono"', 'monospace'],
-                    },
-                    colors: {
-                        cream: '#efe2bd',
-                        espresso: '#3b2d2d',
-                        walnut: '#5a4634',
-                        caramel: '#B78358',
-                        caramelDark: '#8f6544',
-                        card: '#F5E8C7',
-                        cardBorder: '#8c7b6b',
-                        footerBg: '#3F3131',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              mono: ['"Roboto Mono"', "monospace"],
+            },
+            colors: {
+              cream: "#efe2bd",
+              espresso: "#3b2d2d",
+              walnut: "#5a4634",
+              caramel: "#B78358",
+              caramelDark: "#8f6544",
+              card: "#F5E8C7",
+              cardBorder: "#8c7b6b",
+              footerBg: "#3F3131",
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-cream text-[#222] font-sans">
-
-<div class="mx-auto w-[90%] py-8">
-
-    <!-- Navbar -->
-    <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+  </head>
+  <body class="bg-cream text-[#222] font-sans">
+    <div class="mx-auto w-[90%] py-8">
+      <!-- Navbar -->
+      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
         <div class="flex items-center gap-2.5">
-            <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
-            <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
+          <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
+          <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
         </div>
 
         <ul class="flex list-none items-center gap-4">
-            <li><a href="home.html" class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]">Home</a></li>
-            <li><a href="cafe_hub.html" class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]">Coffee Hub</a></li>
-            <li><a href="our.story.html" class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]">Our Story</a></li>
+          <li>
+            <a
+              href="../index.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/cafe_hub.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/our.story.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Our Story</a
+            >
+          </li>
         </ul>
 
-        <button class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white">
-            <i class="fa-solid fa-mug-hot"></i>
-            Your Basket
+        <button
+          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white"
+        >
+          <i class="fa-solid fa-mug-hot"></i>
+          Your Basket
         </button>
-    </nav>
+      </nav>
 
-    <!-- Story Section -->
-    <section class="mb-20 flex flex-col items-center justify-between gap-14 md:flex-row">
-
+      <!-- Story Section -->
+      <section
+        class="mb-20 flex flex-col items-center justify-between gap-14 md:flex-row"
+      >
         <div class="flex-1">
-            <h1 class="font-display text-4xl font-normal leading-tight md:text-6xl">The Story Behind</h1>
-            <h2 class="mb-6 mt-2 font-display text-4xl md:text-5xl">The Tavern</h2>
+          <h1
+            class="font-display text-4xl font-normal leading-tight md:text-6xl"
+          >
+            The Story Behind
+          </h1>
+          <h2 class="mb-6 mt-2 font-display text-4xl md:text-5xl">
+            The Tavern
+          </h2>
 
-            <p class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg">
-                At Brew Haven, we believe that every cup of coffee brings
-                people together. Our coffee was created with a passion for
-                serving freshly brewed coffee made from premium beans and
-                quality ingredients.
-            </p>
+          <p
+            class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg"
+          >
+            At Brew Haven, we believe that every cup of coffee brings people
+            together. Our coffee was created with a passion for serving freshly
+            brewed coffee made from premium beans and quality ingredients.
+          </p>
 
-            <p class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg">
-                We aim to provide a warm and welcoming space where you can
-                relax, enjoy delicious drinks and desserts, and create
-                unforgettable moments with family and friends.
-            </p>
+          <p
+            class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg"
+          >
+            We aim to provide a warm and welcoming space where you can relax,
+            enjoy delicious drinks and desserts, and create unforgettable
+            moments with family and friends.
+          </p>
 
-            <p class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg">
-                Every cup is crafted with care, bringing comfort,
-                flavor, and happiness to every visit.
-            </p>
+          <p
+            class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg"
+          >
+            Every cup is crafted with care, bringing comfort, flavor, and
+            happiness to every visit.
+          </p>
 
-            <p class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg">
-                Brew Haven — Fresh Coffee, Fresh Moments.
-            </p>
+          <p
+            class="mb-4 font-mono text-base leading-loose text-[#444] md:text-lg"
+          >
+            Brew Haven — Fresh Coffee, Fresh Moments.
+          </p>
         </div>
 
         <div class="flex-1 text-right">
-            <img src="../pic/Screenshot 2026-07-10 161424.png" alt="Coffee Shop" class="w-full rounded">
+          <img
+            src="../pic/Screenshot 2026-07-10 161424.png"
+            alt="Coffee Shop"
+            class="w-full rounded"
+          />
         </div>
+      </section>
 
-    </section>
-
-    <!-- Timeline -->
-    <div class="mb-9 text-center font-bold">
+      <!-- Timeline -->
+      <div class="mb-9 text-center font-bold">
         <span>Our Journey</span>
-    </div>
+      </div>
 
-    <div class="relative flex flex-wrap items-start justify-between gap-y-12 md:flex-nowrap">
-
+      <div
+        class="relative flex flex-wrap items-start justify-between gap-y-12 md:flex-nowrap"
+      >
         <div class="absolute left-0 top-[35px] h-0.5 w-full bg-[#999]"></div>
 
         <div class="relative z-10 w-1/2 text-center md:w-1/4">
-            <div class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#cbb08b] text-2xl">
-                <i class="fa-solid fa-seedling"></i>
-            </div>
-            <h3 class="mb-2 font-semibold">2018</h3>
-            <p class="text-[#555]">The Beginning</p>
+          <div
+            class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#cbb08b] text-2xl"
+          >
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="mb-2 font-semibold">2018</h3>
+          <p class="text-[#555]">The Beginning</p>
         </div>
 
         <div class="relative z-10 w-1/2 text-center md:w-1/4">
-            <div class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl">
-                <i class="fa-solid fa-mug-hot"></i>
-            </div>
-            <h3 class="mb-2 font-semibold">2019</h3>
-            <p class="text-[#555]">First Coffee</p>
+          <div
+            class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl"
+          >
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3 class="mb-2 font-semibold">2019</h3>
+          <p class="text-[#555]">First Coffee</p>
         </div>
 
         <div class="relative z-10 w-1/2 text-center md:w-1/4">
-            <div class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl">
-                <i class="fa-solid fa-users"></i>
-            </div>
-            <h3 class="mb-2 font-semibold">2022</h3>
-            <p class="text-[#555]">Growing Together</p>
+          <div
+            class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl"
+          >
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3 class="mb-2 font-semibold">2022</h3>
+          <p class="text-[#555]">Growing Together</p>
         </div>
 
         <div class="relative z-10 w-1/2 text-center md:w-1/4">
-            <div class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <h3 class="mb-2 font-semibold">2026</h3>
-            <p class="text-[#555]">Still Brewing</p>
+          <div
+            class="mx-auto mb-4 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#f2f2f2] text-2xl"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <h3 class="mb-2 font-semibold">2026</h3>
+          <p class="text-[#555]">Still Brewing</p>
         </div>
-
+      </div>
     </div>
 
-</div>
-
-<!-- Contact Section -->
-<section class="mx-auto my-24 flex w-[90%] flex-col items-start justify-between gap-20 md:flex-row">
-
-    <!-- Left Side -->
-    <div class="w-full flex-1">
-
+    <!-- Contact Section -->
+    <section
+      class="mx-auto my-24 flex w-[90%] flex-col items-start justify-between gap-20 md:flex-row"
+    >
+      <!-- Left Side -->
+      <div class="w-full flex-1">
         <h1 class="mb-8 font-display text-4xl md:text-5xl">Contact Us</h1>
 
         <form class="flex flex-col">
+          <label class="mb-2.5 mt-4 text-lg">Name</label>
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+          />
 
-            <label class="mb-2.5 mt-4 text-lg">Name</label>
-            <input type="text" placeholder="Your Name" class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none">
+          <label class="mb-2.5 mt-4 text-lg">Phone Number</label>
+          <input
+            type="text"
+            placeholder="Your Phone"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+          />
 
-            <label class="mb-2.5 mt-4 text-lg">Phone Number</label>
-            <input type="text" placeholder="Your Phone" class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none">
+          <label class="mb-2.5 mt-4 text-lg">Gmail</label>
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+          />
 
-            <label class="mb-2.5 mt-4 text-lg">Gmail</label>
-            <input type="email" placeholder="Your Email" class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none">
+          <label class="mb-2.5 mt-4 text-lg">Message</label>
+          <textarea
+            placeholder="Your Message"
+            class="h-[170px] w-full resize-none rounded-[35px] border-none bg-[#d9d9d9] px-6 py-5 text-base outline-none"
+          ></textarea>
 
-            <label class="mb-2.5 mt-4 text-lg">Message</label>
-            <textarea placeholder="Your Message" class="h-[170px] w-full resize-none rounded-[35px] border-none bg-[#d9d9d9] px-6 py-5 text-base outline-none"></textarea>
-
-            <button type="submit" class="mt-8 w-[180px] cursor-pointer rounded-2xl border-none bg-caramel p-3.5 text-xl text-white transition hover:bg-caramelDark">Submit</button>
-
+          <button
+            type="submit"
+            class="mt-8 w-[180px] cursor-pointer rounded-2xl border-none bg-caramel p-3.5 text-xl text-white transition hover:bg-caramelDark"
+          >
+            Submit
+          </button>
         </form>
+      </div>
 
-    </div>
-
-    <!-- Right Side -->
-    <div class="w-full flex-1 rounded-[45px] bg-caramel p-8">
-
+      <!-- Right Side -->
+      <div class="w-full flex-1 rounded-[45px] bg-caramel p-8">
         <h2 class="mb-8 text-center text-3xl md:text-4xl">Store Information</h2>
 
         <div class="mb-6">
+          <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
+            <i
+              class="fa-solid fa-location-dot flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
+            ></i>
+            Phnom Penh, Cambodia
+          </p>
 
-            <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
-                <i class="fa-solid fa-location-dot flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"></i>
-                Phnom Penh, Cambodia
-            </p>
+          <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
+            <i
+              class="fa-solid fa-phone flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
+            ></i>
+            +855 12 345 678
+          </p>
 
-            <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
-                <i class="fa-solid fa-phone flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"></i>
-                +855 12 345 678
-            </p>
+          <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
+            <i
+              class="fa-solid fa-envelope flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
+            ></i>
+            cafe@gmail.com
+          </p>
 
-            <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
-                <i class="fa-solid fa-envelope flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"></i>
-                cafe@gmail.com
-            </p>
+          <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
+            <i
+              class="fa-regular fa-clock flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"
+            ></i>
+            Open Daily
+          </p>
 
-            <p class="mb-4 flex items-center gap-4 text-lg md:text-xl">
-                <i class="fa-regular fa-clock flex h-11 w-11 items-center justify-center rounded-full bg-white text-black"></i>
-                Open Daily
-            </p>
-
-            <p class="ml-16">7:00 AM - 8:30 PM</p>
-
+          <p class="ml-16">7:00 AM - 8:30 PM</p>
         </div>
 
-        <img src="../pic/images.jpg" alt="Map" class="h-[220px] w-full rounded-lg object-cover">
+        <img
+          src="../pic/images.jpg"
+          alt="Map"
+          class="h-[220px] w-full rounded-lg object-cover"
+        />
+      </div>
+    </section>
 
-    </div>
+    <!-- Team Section -->
+    <section class="mx-auto my-24 w-[90%]">
+      <h1 class="mb-8 font-display text-4xl text-[#2f2320] md:text-[3.6rem]">
+        Meet Our Team
+      </h1>
 
-</section>
+      <p
+        class="mb-14 w-full text-lg leading-loose text-[#333] md:w-[95%] md:text-xl"
+      >
+        Behind every great cup of coffee is a passionate team dedicated to
+        creating the best experience for our customers. From skilled baristas to
+        friendly staff, we work together to serve quality coffee, delicious
+        treats, and warm hospitality every day.
+      </p>
 
-<!-- Team Section -->
-<section class="mx-auto my-24 w-[90%]">
-
-    <h1 class="mb-8 font-display text-4xl text-[#2f2320] md:text-[3.6rem]">Meet Our Team</h1>
-
-    <p class="mb-14 w-full text-lg leading-loose text-[#333] md:w-[95%] md:text-xl">
-        Behind every great cup of coffee is a passionate team dedicated to creating
-        the best experience for our customers. From skilled baristas to friendly
-        staff, we work together to serve quality coffee, delicious treats,
-        and warm hospitality every day.
-    </p>
-
-    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
-
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team1.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Team</h3>
-                <p class="text-xl text-[#3d2d2d]">Sambath</p>
-            </div>
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team1.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Team</h3>
+            <p class="text-xl text-[#3d2d2d]">Sambath</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team3.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Pouch</h3>
-                <p class="text-xl text-[#3d2d2d]">Mary</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team3.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Pouch</h3>
+            <p class="text-xl text-[#3d2d2d]">Mary</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team2.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Samnang</h3>
-                <p class="text-xl text-[#3d2d2d]">Punharith</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team2.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Samnang</h3>
+            <p class="text-xl text-[#3d2d2d]">Punharith</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team4.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Sen</h3>
-                <p class="text-xl text-[#3d2d2d]">Piseth</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team4.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Sen</h3>
+            <p class="text-xl text-[#3d2d2d]">Piseth</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team5.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Chao</h3>
-                <p class="text-xl text-[#3d2d2d]">Sothearith</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team5.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Chao</h3>
+            <p class="text-xl text-[#3d2d2d]">Sothearith</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team6.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Sun</h3>
-                <p class="text-xl text-[#3d2d2d]">Rathanak Sathya</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team6.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Sun</h3>
+            <p class="text-xl text-[#3d2d2d]">Rathanak Sathya</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team7.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Vy</h3>
-                <p class="text-xl text-[#3d2d2d]">Thavin</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team7.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Vy</h3>
+            <p class="text-xl text-[#3d2d2d]">Thavin</p>
+          </div>
         </div>
 
-        <div class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl">
-            <img src="../pic/team8.jpg" alt="" class="h-[200px] w-full object-cover">
-            <div class="p-4">
-                <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Hav</h3>
-                <p class="text-xl text-[#3d2d2d]">Chhanun</p>
-            </div>
+        <div
+          class="overflow-hidden rounded-[30px] border-2 border-cardBorder bg-card transition-transform duration-300 hover:-translate-y-2.5 hover:shadow-2xl"
+        >
+          <img
+            src="../pic/team8.jpg"
+            alt=""
+            class="h-[200px] w-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="mb-2 font-display text-2xl text-[#2d2222]">Hav</h3>
+            <p class="text-xl text-[#3d2d2d]">Chhanun</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ============ FOOTER (shared across all pages) ============ -->
-  <footer class="bg-footerBg px-6 pt-14 pb-6 text-[#f5f5f5] md:px-16 lg:px-20">
-    <div class="flex flex-wrap justify-between gap-10">
-
+    <!-- ============ FOOTER (shared across all pages) ============ -->
+    <footer
+      class="bg-footerBg px-6 pt-14 pb-6 text-[#f5f5f5] md:px-16 lg:px-20"
+    >
+      <div class="flex flex-wrap justify-between gap-10">
         <div class="flex max-w-[180px] items-center justify-center">
-            <img src="../pic/Logo.png" alt="The Tavern Coffeehouse Logo" class="h-auto w-full object-contain">
+          <img
+            src="../pic/Logo.png"
+            alt="The Tavern Coffeehouse Logo"
+            class="h-auto w-full object-contain"
+          />
         </div>
 
-        <div class="flex min-w-[180px] flex-col gap-2 text-sm leading-relaxed text-gray-300">
-            <p>The Tavern Coffee House</p>
-            <p>12302 Buckeye Rd</p>
-            <p>Cleveland, OH 44120</p>
-            <p>(216) 291 - 7680</p>
-            <h4 class="mt-2 font-semibold text-white">Open Monday-Friday</h4>
-            <p>8am - 1pm</p>
-            <div class="mt-3 flex gap-3">
-                <a href="#" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+        <div
+          class="flex min-w-[180px] flex-col gap-2 text-sm leading-relaxed text-gray-300"
+        >
+          <p>The Tavern Coffee House</p>
+          <p>12302 Buckeye Rd</p>
+          <p>Cleveland, OH 44120</p>
+          <p>(216) 291 - 7680</p>
+          <h4 class="mt-2 font-semibold text-white">Open Monday-Friday</h4>
+          <p>8am - 1pm</p>
+          <div class="mt-3 flex gap-3">
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-            <a href="home.html" class="hover:text-caramel">Home</a>
-            <a href="our.story.html" class="hover:text-caramel">Our story</a>
-            <a href="#" class="hover:text-caramel">Mission</a>
-            <a href="#" class="hover:text-caramel">Vision</a>
-            <a href="#" class="hover:text-caramel">Values</a>
-            <a href="#" class="hover:text-caramel">Pay it forward</a>
+          <a href="home.html" class="hover:text-caramel">Home</a>
+          <a href="our.story.html" class="hover:text-caramel">Our story</a>
+          <a href="#" class="hover:text-caramel">Mission</a>
+          <a href="#" class="hover:text-caramel">Vision</a>
+          <a href="#" class="hover:text-caramel">Values</a>
+          <a href="#" class="hover:text-caramel">Pay it forward</a>
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-            <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
-            <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
-            <a href="#" class="hover:text-caramel">Tavern merch</a>
-            <a href="#" class="hover:text-caramel">Host an event</a>
-            <a href="#" class="hover:text-caramel">The drip</a>
-            <a href="#" class="hover:text-caramel">Donate</a>
+          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
+          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
+          <a href="#" class="hover:text-caramel">Tavern merch</a>
+          <a href="#" class="hover:text-caramel">Host an event</a>
+          <a href="#" class="hover:text-caramel">The drip</a>
+          <a href="#" class="hover:text-caramel">Donate</a>
         </div>
 
         <div class="max-w-xs text-sm leading-relaxed text-gray-300">
-            <p>Once a neighborhood bar, now a nonprofit coffeehouse, The Tavern is where strong coffee fuels stronger careers and the strongest community. Join us in transforming Buckeye one cup, one connection at a time.</p>
+          <p>
+            Once a neighborhood bar, now a nonprofit coffeehouse, The Tavern is
+            where strong coffee fuels stronger careers and the strongest
+            community. Join us in transforming Buckeye one cup, one connection
+            at a time.
+          </p>
         </div>
+      </div>
 
-    </div>
-
-    <div class="mt-10 border-t border-white/20 pt-5 text-center text-xs leading-relaxed text-gray-400">
-        <p>©2026 The Tavern Coffee House. All Right Reserved. Any unauthorized duplication of content herein will result in prosecution. The Tavern Coffee House is a 501(c)(3) Public Charity - EIN 84-2004511 are tax - deductible. <a href="#" class="underline hover:text-caramel">Privacy Policy</a> | <a href="#" class="underline hover:text-caramel">Term of use</a> | <a href="#" class="underline hover:text-caramel">Refund Policy</a>. Coffee House Website Designed &amp; Developed by Baruh Design &amp; Co.</p>
-    </div>
-</footer>
-
-</body>
+      <div
+        class="mt-10 border-t border-white/20 pt-5 text-center text-xs leading-relaxed text-gray-400"
+      >
+        <p>
+          ©2026 The Tavern Coffee House. All Right Reserved. Any unauthorized
+          duplication of content herein will result in prosecution. The Tavern
+          Coffee House is a 501(c)(3) Public Charity - EIN 84-2004511 are tax -
+          deductible.
+          <a href="#" class="underline hover:text-caramel">Privacy Policy</a> |
+          <a href="#" class="underline hover:text-caramel">Term of use</a> |
+          <a href="#" class="underline hover:text-caramel">Refund Policy</a>.
+          Coffee House Website Designed &amp; Developed by Baruh Design &amp;
+          Co.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

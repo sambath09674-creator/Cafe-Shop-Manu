@@ -3,309 +3,418 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Smokey Brand - The Smoley Caffee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              display: ['"Playfair Display"', "serif"],
-              mono: ['"Roboto Mono"', "monospace"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ["Georgia", "serif"],
             },
             colors: {
-              cream: "#efe2bd",
-              espresso: "#3b2d2d",
-              walnut: "#5a4634",
+              cream: "#efe8d4",
+              espresso: "#2c2520",
+              espressoDeep: "#241a17",
               caramel: "#B78358",
-              caramelDark: "#8f6544",
-              card: "#F5E8C7",
-              cardBorder: "#8c7b6b",
-              footer: "#3F3131",
+              accent: "#e58f27",
+              tan: "#a88d72",
+              brew: "#c09675",
+              offwhite: "#fcfbfa",
+              darkBanner: "#362925",
+              circleBg: "#40302b",
+              gradStart: "#ecd6b5",
+              gradEnd: "#cca483",
+              footerBg: "#3F3131",
             },
           },
         },
       };
     </script>
-    <!-- <link rel="stylesheet" href="./src/output.css" /> -->
-    <link rel="stylesheet" href="./style/index.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <!-- Navbar -->
-    <header class="text-white bg-cream">
-      <nav class="relative top-0 start-0 z-20 w-full px-3 sm:px-6">
-        <div
-          class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3 sm:p-4"
-        >
-          <a href="#" class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-            <img
-              src="./pic/Screenshot 2026-07-11 152105.png"
-              class="h-8 sm:h-10 w-auto"
-              alt="Smokey Brand Logo"
-            />
-            <span
-              class="self-center text-base sm:text-xl font-semibold text-black whitespace-nowrap"
-            >
-              Smokey Brand
-            </span>
-          </a>
-
-          <div class="flex items-center space-x-2 md:order-2 shrink-0">
-            <button
-              type="button"
-              class="inline-flex items-center gap-1.5 rounded-lg border border-black px-2.5 py-1.5 sm:px-3 sm:py-2 text-xs sm:text-sm font-medium text-black transition-all hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              <svg
-                class="h-4 w-4 sm:h-5 sm:w-5 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                aria-hidden="true"
-              >
-                <path
-                  d="M152-16c-13.3 0-24 10.7-24 24 0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C183.5 31.7 176 24.1 176 8 176-5.3 165.3-16 152-16zM96 192c-17.7 0-32 14.3-32 32l0 192c0 53 43 96 96 96l192 0c41.8 0 77.4-26.7 90.5-64l5.5 0c70.7 0 128-57.3 128-128S518.7 192 448 192L96 192zM448 384l0-128c35.3 0 64 28.7 64 64s-28.7 64-64 64zM288 8c0-13.3-10.7-24-24-24S240-5.3 240 8c0 38.9 23.4 59.4 39.1 73.1l1.1 1c16.3 14.3 23.8 21.8 23.8 37.9 0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C295.5 31.7 288 24.1 288 8z"
-                />
-              </svg>
-              <span class="whitespace-nowrap">Your Basket</span>
-            </button>
-
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              class="inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="h-5 w-5 sm:h-6 sm:w-6"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="M5 7h14M5 12h14M5 17h14"
-                />
-              </svg>
-            </button>
-          </div>
-
-          <div
-            class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
-            id="navbar-sticky"
-          >
-            <ul
-              class="mt-4 flex flex-col items-center font-medium md:mt-0 md:flex-row md:space-x-2 rtl:space-x-reverse"
-            >
-              <li>
-                <a
-                  href="./index.html"
-                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="./html/cafe_hub.html"
-                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
-                  >Coffee Hub</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block rounded-full px-4 py-2 text-black transition-colors hover:bg-[#2b2525] hover:text-white"
-                  >Our Story</a
-                >
-              </li>
-            </ul>
-          </div>
+  <body class="font-sans text-espresso bg-cream">
+    <!-- ============ HERO (gradient wrapper) ============ -->
+    <!-- <div class="bg-gradient-to-b from-gradStart to-gradEnd"> -->
+    <div class="mx-auto px-6 pt-8 pb-4 md:px-12 lg:px-20">
+      <!-- Navbar -->
+      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
+          <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
         </div>
-      </nav>
-    </header>
-    <!-- End of Navbar -->
-    <div class="bg-linear-to-t from-amber-200 via-amber-100 to-amber-50">
-      <section class="max-w-7xl px-10 mx-auto md:px-25 lg:px-30 py-12">
-        <div
-          id="group-header"
-          class="grid grid-cols-1 md:grid-cols-2 items-center gap-8"
-        >
-          <div class="flex flex-col justify-center space-y-6">
-            <h3 class="text-xl tracking-wider text-gray-800 font-medium">
-              The Smokey
-            </h3>
 
-            <h1
-              class="text-6xl md:text-7xl font-bold font-serif tracking-tight text-black leading-none"
-            >
-              CAFFEE
-            </h1>
-
-            <p class="text-gray-700 text-base leading-relaxed max-w-md pt-2">
-              Discover the Essence of Exquisite Caffee Beans. Each bean is
-              meticulously sourced from the finest coffee-growing regions.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-4 pt-4">
-              <a
-                href="#"
-                class="inline-flex items-center gap-2 text-white bg-[#3e3431] hover:bg-gray-500 transition-colors font-medium rounded-full text-sm px-6 py-3 shadow-sm"
-              >
-                <span>🍵</span>
-                <span>Shop Beans</span>
-              </a>
-
-              <a
-                href="#"
-                class="inline-flex items-center gap-2 text-white bg-[#ba9368] hover:bg-gray-500 transition-colors font-medium rounded-full text-sm px-6 py-3 shadow-sm"
-              >
-                <span>❤️</span>
-                <span>Our Cafes</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="flex justify-center items-center py-6">
-            <div
-              class="relative w-60 h-60 md:w-75 md:h-75 rounded-full bg-[#3b2d2a] flex items-center justify-center"
-            >
-              <img
-                class="w-full h-auto object-contain transform scale-110"
-                src="./pic/belalhossainseo-coffee-cup-8998251.png"
-                alt="Coffee Cup Splash"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div
-      class="min-h-16 bg-orange-950 flex flex-col sm:flex-row items-center justify-around text-white p-4 gap-2 text-center"
-    >
-      <p>Get 10% Off Your First Order</p>
-      <p>Free Delivery in Cambodia</p>
-      <p>Taste For Everyone</p>
-    </div>
-
-    <main class="">
-      <section class="bg-[#b8855c] text-white 8">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center"
-          id="bg"
-        >
-          <!-- Left Column: Coffee Bag Image -->
-          <div class="flex justify-center items-center">
-            <img
-              src="./pic/Gemini_Generated_Image_9juj0v9juj0v9juj.png"
-              alt="Coffee Bag"
-              class="w-200 object-contain drop-shadow-lg"
-            />
-          </div>
-
-          <!-- Right Column: Content & CTA -->
-          <div class="space-y-4 max-w-lg container p-10">
-            <h2
-              class="text-3xl md:text-4xl font-light tracking-wide text-white/90"
-            >
-              Grab a bag of our
-            </h2>
-            <h1
-              class="text-5xl md:text-6xl font-bold tracking-tight text-white"
-            >
-              Best Brew!
-            </h1>
-
-            <p class="text-white/90 text-base leading-relaxed pt-2">
-              Take a piece of The Tavern home with you. Every 12oz bag of our
-              in-house roasted signature coffee fuels more than your morning -
-              it powers job training, mentorship, and hope right here in
-              Buckeye.
-              <strong class="font-bold text-white"
-                >Brew boldly. Give Generously.</strong
-              >
-            </p>
-
-            <hr class="border-white/40 my-4" />
-
-            <div class="flex items-center gap-2 text-white/90 text-sm py-1">
-              <span>🍵</span>
-              <span>12 oz bag - 17-21 servings</span>
-            </div>
-
-            <hr class="border-white/40 my-4" />
-
+        <ul class="flex list-none items-center gap-4">
+          <li>
             <a
-              href="#"
-              class="inline-block bg-[#a25838] hover:bg-[#8b4a2e] text-white font-medium text-base px-6 py-2.5 rounded-md shadow transition-colors mt-2"
+              href="./index.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Home</a
             >
-              $14 | Order Today
+          </li>
+          <li>
+            <a
+              href="./html/cafe_hub.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="./html/our.story.html"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              >Our Story</a
+            >
+          </li>
+        </ul>
+
+        <button
+          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white"
+        >
+          <i class="fa-solid fa-mug-hot"></i>
+          Your Basket
+        </button>
+      </nav>
+
+      <!-- Hero content -->
+      <main
+        class="grid grid-cols-1 items-center gap-12 pt-6 text-center lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:text-left"
+      >
+        <div>
+          <span class="mb-1 block text-2xl font-medium opacity-90"
+            >The Smoley</span
+          >
+          <h1
+            class="mb-8 font-serif text-6xl font-black leading-none tracking-widest md:text-8xl"
+          >
+            CAFFEE
+          </h1>
+          <p
+            class="mx-auto mb-14 max-w-md text-base font-medium leading-8 opacity-85 lg:mx-0"
+          >
+            Discover the Essence of Exquisite Caffee Beans. Each bean is
+            meticulously sourced from the finest coffee-growing regions.
+          </p>
+          <div class="flex flex-wrap justify-center gap-5 lg:justify-start">
+            <a
+              href="./html/cafe_hub.html"
+              class="inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <span></span> Shop Beans
+            </a>
+            <a
+              href="./html/our_story.html"
+              class="inline-flex items-center gap-2 rounded-full bg-tan px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <span></span> Our Cafes
             </a>
           </div>
         </div>
-      </section>
-    </main>
 
-      <section class="relative overflow-hidden bg-white rounded-2xl">
-      <div 
-          class="absolute inset-0 bg-repeat opacity-40"
-          style="background-image: url('/images/background-mage.jpg');">
+        <div class="relative flex items-center justify-center pb-4 lg:pb-0">
+          <div
+            class="absolute h-[280px] w-[280px] rounded-full bg-circleBg md:h-[440px] md:w-[440px]"
+          ></div>
+          <img
+            src="./pic/belalhossainseo-coffee-cup-8998251.png"
+            alt="Coffee Cup Splash"
+            class="relative z-10 w-[85%] max-w-[420px] translate-y-2"
+          />
+        </div>
+      </main>
+    </div>
+    <!-- </div> -->
+
+    <!-- ============ PROMO BANNER ============ -->
+    <div
+      class="flex flex-col mt-16 items-center justify-around gap-3 bg-darkBanner px-20 py-7 text-center text-white md:flex-row"
+    >
+      <div class="text-base font-medium opacity-95">
+        Get 10% Off Your First Order
+      </div>
+      <div class="text-base font-medium opacity-95">
+        Free Delivery in The Cambodia
+      </div>
+      <div class="text-base font-medium opacity-95">Taste For Everyone</div>
+    </div>
+
+    <!-- ============ BEST BREW ============ -->
+    <section class="bg-brew px-6 py-20 md:px-16 lg:px-20">
+      <div
+        class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 text-center md:grid-cols-[1fr_1.2fr] md:text-left"
+      >
+        <div class="mx-auto flex w-full max-w-[340px] justify-center">
+          <div class="relative w-full">
+            <img
+              src="./pic/Gemini_Generated_Image_9juj0v9juj0v9juj.png"
+              alt="Coffee Bag"
+              class="w-full drop-shadow-xl"
+            />
+            <div
+              class="absolute -bottom-2 right-2 rotate-[-15deg] text-6xl drop-shadow-lg"
+            >
+              ☕️
+            </div>
+          </div>
+        </div>
+
+        <div class="text-white">
+          <h2 class="mb-1 text-2xl font-normal opacity-95">
+            Grab a bag of our
+          </h2>
+          <h1
+            class="mb-8 font-serif text-5xl font-bold leading-tight md:text-7xl"
+          >
+            Best Brew!
+          </h1>
+
+          <p class="mb-10 text-lg leading-relaxed opacity-90">
+            Take a piece of The Tavern home with you. Every 12oz bag of our
+            in-house roasted signature coffee fuels more than your morning - it
+            power job training, mentorship, and hope right here in Buckeye.
+            <strong class="mt-2 block font-bold"
+              >Brew boldly. Give Generously.</strong
+            >
+          </p>
+
+          <div
+            class="mb-10 flex items-center justify-center gap-2 border-y border-white/40 py-3 text-base font-medium opacity-95 md:justify-start"
+          >
+            <span class="opacity-80">☕️</span> 12 oz bag - 17-21 servings
+          </div>
+
+          <a
+            href="#"
+            class="inline-block rounded-lg bg-[#9c6c4c] px-9 py-3.5 text-base font-bold tracking-wide text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#865b3e]"
+          >
+            $14 | Order Today
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERSHIP ============ -->
+    <!-- <section class="bg-offwhite px-6 py-20 md:px-16 lg:px-20">
+        <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 text-center md:grid-cols-[1.2fr_0.8fr] md:text-left">
+
+            <div>
+                <span class="mb-6 block text-lg font-semibold text-[#9c6c4c]">Baked Goods, Pastries &amp; Sandwiches</span>
+                <h2 class="mb-8 font-serif text-3xl font-normal leading-snug text-[#332724] md:text-[2.8rem]">
+                    Better Together : The Tavern X Hunny Bunny's Bakery
+                </h2>
+                <p class="mb-10 text-base leading-relaxed text-gray-600">
+                    Every pastry we serve is handcrafted by Hunny Bakery, a local gem we're proud to support. It's sweet partnership that supports local bussiness and builds up Buckeye-one bite at a time. It's more than a treat-It's a taste of Buckeye's small business spirit, made fresh just for you.
+                </p>
+                <a href="#" class="inline-flex items-center gap-3 rounded bg-darkBanner px-9 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-espressoDeep">
+                    Order Now <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+
+            <div class="mx-auto flex w-full max-w-[400px] justify-center">
+                <img src="../pic/Cake.png" alt="Blueberry Muffin" class="w-full drop-shadow-lg">
+            </div>
+
+        </div>
+    </section> -->
+
+    <section
+      class="bg-[#fcfbfa] bg-repeat bg-[length:350px] bg-center px-6 py-20 md:px-16 lg:px-20"
+      style="background-image: url(&quot;../pic/Untitled-1.png&quot;)"
+    >
+      <div
+        class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 text-center md:grid-cols-[1.2fr_0.8fr] md:text-left"
+      >
+        <div>
+          <span class="mb-6 block text-lg font-semibold text-[#9c6c4c]"
+            >Baked Goods, Pastries &amp; Sandwiches</span
+          >
+          <h2
+            class="mb-8 font-serif text-3xl font-normal leading-snug text-[#332724] md:text-[2.8rem]"
+          >
+            Better Together : The Tavern X Hunny Bunny's Bakery
+          </h2>
+          <p class="mb-10 text-base leading-relaxed text-gray-600">
+            Every pastry we serve is handcrafted by Hunny Bakery, a local gem
+            we're proud to support. It's sweet partnership that supports local
+            bussiness and builds up Buckeye-one bite at a time. It's more than a
+            treat-It's a taste of Buckeye's small business spirit, made fresh
+            just for you.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 rounded bg-darkBanner px-9 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-espressoDeep"
+          >
+            Order Now <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+
+        <div class="mx-auto flex w-full max-w-[400px] justify-center">
+          <img
+            src="../pic/Cake.png"
+            alt="Blueberry Muffin"
+            class="w-full drop-shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- ============ STORY MOSAIC ============ -->
+    <section class="bg-cream px-6 py-24 md:px-16 lg:px-20">
+      <div
+        class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-[1.1fr_0.9fr]"
+      >
+        <div
+          class="relative mx-auto h-[320px] w-full max-w-[550px] md:mx-0 md:h-[520px] md:max-w-none"
+        >
+          <div
+            class="absolute left-0 top-0 z-20 h-3/5 w-1/2 overflow-hidden rounded-xl shadow-lg"
+          >
+            <img
+              src="../pic/088b65345010c4c01a49cb467f656b75.jpg"
+              alt="Coffee Shop Exterior"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute right-[5%] top-[12%] z-10 h-[42%] w-[48%] overflow-hidden rounded-xl shadow-lg"
+          >
+            <img
+              src="../pic/coffee-212-3.jpg"
+              alt="Coffee Shop Counter"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute bottom-0 left-[45%] z-30 h-1/2 w-[48%] overflow-hidden rounded-xl border-[6px] border-cream shadow-lg"
+          >
+            <img
+              src="../pic/k-50-t-35545454531.webp"
+              alt="Baristas Preparing Coffee"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2
+            class="mb-8 font-serif text-3xl font-normal leading-tight tracking-tight text-[#332724] md:text-[3.2rem]"
+          >
+            Repurposed.<br />
+            Reimagined.<br />
+            Reigniting Buckeye<br />
+            -One cup at a time.
+          </h2>
+          <p class="mb-10 text-lg leading-relaxed text-gray-600">
+            the Tavern Coffee is a nonprofit cafe where strong coffee fuels
+            second chances. We're creating jobs, builing community, and serving
+            hope daily in the heart of Buckeye.
+          </p>
+          <a
+            href="#"
+            class="inline-block rounded-md bg-darkBanner px-10 py-3.5 text-base font-medium text-white transition hover:-translate-y-0.5 hover:bg-espressoDeep"
+          >
+            Read our story &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER (shared across all pages) ============ -->
+
+    <footer
+      class="bg-footerBg px-6 pt-14 pb-6 text-[#f5f5f5] md:px-16 lg:px-20"
+    >
+      <div class="flex flex-wrap justify-between gap-10">
+        <div class="flex max-w-[180px] items-center justify-center">
+          <img
+            src="../pic/Logo.png"
+            alt="The Tavern Coffeehouse Logo"
+            class="h-auto w-full object-contain"
+          />
+        </div>
+
+        <div
+          class="flex min-w-[180px] flex-col gap-2 text-sm leading-relaxed text-gray-300"
+        >
+          <p>The Tavern Coffee House</p>
+          <p>12302 Buckeye Rd</p>
+          <p>Cleveland, OH 44120</p>
+          <p>(216) 291 - 7680</p>
+          <h4 class="mt-2 font-semibold text-white">Open Monday-Friday</h4>
+          <p>8am - 1pm</p>
+          <div class="mt-3 flex gap-3">
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 transition hover:border-caramel hover:bg-caramel"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
+          <a href="home.html" class="hover:text-caramel">Home</a>
+          <a href="our.story.html" class="hover:text-caramel">Our story</a>
+          <a href="#" class="hover:text-caramel">Mission</a>
+          <a href="#" class="hover:text-caramel">Vision</a>
+          <a href="#" class="hover:text-caramel">Values</a>
+          <a href="#" class="hover:text-caramel">Pay it forward</a>
+        </div>
+
+        <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
+          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
+          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
+          <a href="#" class="hover:text-caramel">Tavern merch</a>
+          <a href="#" class="hover:text-caramel">Host an event</a>
+          <a href="#" class="hover:text-caramel">The drip</a>
+          <a href="#" class="hover:text-caramel">Donate</a>
+        </div>
+
+        <div class="max-w-xs text-sm leading-relaxed text-gray-300">
+          <p>
+            Once a neighborhood bar, now a nonprofit coffeehouse, The Tavern is
+            where strong coffee fuels stronger careers and the strongest
+            community. Join us in transforming Buckeye one cup, one connection
+            at a time.
+          </p>
+        </div>
       </div>
 
-      <div class="relative z-10 flex items-center justify-center gap-60 px-16 py-14">
-    <div class="max-w-md">
-      <p class="text-red-400 font-medium mb-2">
-        Backed Goods, Pastries & Sandwiches
-      </p>
-      <h1 class="text-4xl font-serif mb-4">
-        Better Together : The TAvern X Hunny Bu
-      </h1>
-      <p class="text-gray-600 mb-6">
-       Every pastry we serve is handcrafted by Hunny Backery, a local gem we're pround to support. it's sweet parnership thst supports local than a treat-it's taste of Buckeye's small bussiness spirit, made fresh just for you.
-      </p>
-      <button class="bg-neutral-900 text-white px-6 py-3 rounded-full">
-        Order Now 
-      </button>
-    </div>
-
-    <div class="w-100">
-      <img src="/images/image.png" alt="Muffin" class="w-full drop-shadow-2xl" />
-    </div>
-  </div>
-</section>
-   
-    <section class="relative overflow-hidden​  bg-white rounded-2xl ">
-  
-    <div class="relative z-10 flex items-center justify-center gap-60 px-16 py-14 md:flex-row-reverse">
-    
-    <div class="max-w-md ">
-      <h1 class="text-4xl font-serif mb-4">
-         Repurposed.
-         Reimagined.
-         Reigniting Buckeye
-         -One cup at a time.
-      </h1>
-      <p class="text-gray-600 mb-6">
-     the Tavern Coffee is a nonprofit cafe where 
-                        strong coffee fules second chances. We're creating 
-                        Jobs,builing community, and serving hope daily in
-                        the heart of Buckeye.
-      </p>
-      <button class="bg-neutral-900 text-white px-6 py-3 rounded-full">
-        Read our story
-      </button>
-    </div>
-
-    <div class="w-100">
-      <img src="/images/shop-review.jpg" alt="Muffin" class="w-full drop-shadow-2xl" />
-    </div>
-
-  </div>
-</section>
-
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+      <div
+        class="mt-10 border-t border-white/20 pt-5 text-center text-xs leading-relaxed text-gray-400"
+      >
+        <p>
+          ©2026 The Tavern Coffee House. All Right Reserved. Any unauthorized
+          duplication of content herein will result in prosecution. The Tavern
+          Coffee House is a 501(c)(3) Public Charity - EIN 84-2004511 are tax -
+          deductible.
+          <a href="#" class="underline hover:text-caramel">Privacy Policy</a> |
+          <a href="#" class="underline hover:text-caramel">Term of use</a> |
+          <a href="#" class="underline hover:text-caramel">Refund Policy</a>.
+          Coffee House Website Designed &amp; Developed by Baruh Design &amp;
+          Co.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

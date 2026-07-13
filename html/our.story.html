@@ -50,46 +50,95 @@
       };
     </script>
   </head>
-  <body class="bg-cream text-[#222] font-sans dark:bg-espressoDeep dark:text-cream">
+  <body
+    class="bg-cream text-[#222] font-sans dark:bg-espressoDeep dark:text-cream"
+  >
     <div class="mx-auto w-[90%] py-8">
       <!-- Navbar -->
-      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+      <nav
+        class="mb-14 flex flex-wrap items-center justify-between gap-5 relative"
+      >
         <div class="flex items-center gap-2.5">
           <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
-          <h2 class="text-2xl font-semibold text-espresso dark:text-cream">Smokey Brand</h2>
+          <h2 class="text-2xl font-semibold text-espresso dark:text-cream">
+            Smokey Brand
+          </h2>
         </div>
 
-        <ul class="flex list-none items-center gap-4">
+        <!-- Desktop nav links -->
+        <ul class="hidden md:flex list-none items-center gap-4">
           <li>
             <a
-              href="../index.html"
+              href="./index.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="../html/cafe_hub.html"
+              href="./html/cafe_hub.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Coffee Hub</a
             >
           </li>
           <li>
             <a
-              href="../html/our.story.html"
+              href="./html/our.story.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Our Story</a
             >
           </li>
         </ul>
 
-        <button
-          onclick="toggleDarkMode()"
-          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+        <div class="flex items-center gap-3">
+          <!-- Dark mode button: icon only on small screens, full on md+ -->
+          <button
+            onclick="toggleDarkMode()"
+            class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-4 py-3 md:px-6 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-mug-hot"></i>
+            <span class="hidden md:inline">Dark Mode</span>
+          </button>
+
+          <!-- Hamburger button: mobile only -->
+          <button
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            id="hamburger-btn"
+            class="md:hidden cursor-pointer rounded-lg border-2 border-espresso bg-transparent p-3 text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <ul
+          id="mobile-menu"
+          class="hidden md:hidden absolute left-0 right-0 top-full mt-2 flex list-none flex-col gap-1 rounded-xl border border-espresso/10 bg-[#f5ebd4] p-3 shadow-lg dark:border-cream/10 dark:bg-espresso z-50"
         >
-          <i class="fa-solid fa-mug-hot"></i>
-          Dark Mode
-        </button>
+          <li>
+            <a
+              href="../index.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/cafe_hub.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/our.story.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Our Story</a
+            >
+          </li>
+        </ul>
       </nav>
 
       <!-- Story Section -->
@@ -151,7 +200,9 @@
       <div
         class="relative flex flex-wrap items-start justify-between gap-y-12 md:flex-nowrap"
       >
-        <div class="absolute left-0 top-[35px] h-0.5 w-full bg-[#999] dark:bg-gray-600"></div>
+        <div
+          class="absolute left-0 top-[35px] h-0.5 w-full bg-[#999] dark:bg-gray-600"
+        ></div>
 
         <div class="relative z-10 w-1/2 text-center md:w-1/4">
           <div
@@ -208,27 +259,27 @@
           <input
             type="text"
             placeholder="Your Name"
-            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] dark:bg-black px-6 text-base outline-none"
           />
 
           <label class="mb-2.5 mt-4 text-lg">Phone Number</label>
           <input
             type="text"
             placeholder="Your Phone"
-            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] dark:bg-black px-6 text-base outline-none"
           />
 
           <label class="mb-2.5 mt-4 text-lg">Gmail</label>
           <input
             type="email"
             placeholder="Your Email"
-            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] px-6 text-base outline-none"
+            class="h-[60px] w-full rounded-full border-none bg-[#d9d9d9] dark:bg-black px-6 text-base outline-none"
           />
 
           <label class="mb-2.5 mt-4 text-lg">Message</label>
           <textarea
             placeholder="Your Message"
-            class="h-[170px] w-full resize-none rounded-[35px] border-none bg-[#d9d9d9] px-6 py-5 text-base outline-none"
+            class="h-[170px] w-full resize-none rounded-[35px] border-none bg-[#d9d9d9] dark:bg-black px-6 py-5 text-base outline-none"
           ></textarea>
 
           <button
@@ -286,7 +337,9 @@
 
     <!-- Team Section -->
     <section class="mx-auto my-24 w-[90%]">
-      <h1 class="mb-8 font-display text-4xl text-[#2f2320] md:text-[3.6rem] dark:text-cream">
+      <h1
+        class="mb-8 font-display text-4xl text-[#2f2320] md:text-[3.6rem] dark:text-cream"
+      >
         Meet Our Team
       </h1>
 
@@ -309,7 +362,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Eam</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Eam
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Sambath</p>
           </div>
         </div>
@@ -323,7 +380,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Pouch</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Pouch
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Mary</p>
           </div>
         </div>
@@ -337,7 +398,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Samnang</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Samnang
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Punharith</p>
           </div>
         </div>
@@ -351,7 +416,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Sen</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Sen
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Piseth</p>
           </div>
         </div>
@@ -365,7 +434,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Chao</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Chao
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Sothearith</p>
           </div>
         </div>
@@ -379,8 +452,14 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Sun</h3>
-            <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Rathanak Sathya</p>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Sun
+            </h3>
+            <p class="text-xl text-[#3d2d2d] dark:text-gray-300">
+              Rathanak Sathya
+            </p>
           </div>
         </div>
 
@@ -393,7 +472,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Vy</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Vy
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Thavin</p>
           </div>
         </div>
@@ -407,7 +490,11 @@
             class="h-[200px] w-full object-cover"
           />
           <div class="p-4">
-            <h3 class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream">Hav</h3>
+            <h3
+              class="mb-2 font-display text-2xl text-[#2d2222] dark:text-cream"
+            >
+              Hav
+            </h3>
             <p class="text-xl text-[#3d2d2d] dark:text-gray-300">Chhanun</p>
           </div>
         </div>
@@ -456,21 +543,33 @@
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="home.html" class="hover:text-caramel">Home</a>
-          <a href="our.story.html" class="hover:text-caramel">Our story</a>
-          <a href="#" class="hover:text-caramel">Mission</a>
-          <a href="#" class="hover:text-caramel">Vision</a>
-          <a href="#" class="hover:text-caramel">Values</a>
-          <a href="#" class="hover:text-caramel">Pay it forward</a>
+          <a href="../index.html" class="hover:text-caramel">Home</a>
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Our story</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Mission</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel">Vision</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel">Values</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Pay it forward</a
+          >
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
-          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
-          <a href="#" class="hover:text-caramel">Tavern merch</a>
-          <a href="#" class="hover:text-caramel">Host an event</a>
-          <a href="#" class="hover:text-caramel">The drip</a>
-          <a href="#" class="hover:text-caramel">Donate</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Order online</a
+          >
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Full menu</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Tavern merch</a
+          >
+          <!-- <a href="#" class="hover:text-caramel">Host an event</a> -->
+          <!-- <a href="#" class="hover:text-caramel">The drip</a> -->
+          <!-- <a href="#" class="hover:text-caramel">Donate</a> -->
         </div>
 
         <div class="max-w-xs text-sm leading-relaxed text-gray-300">
@@ -509,10 +608,12 @@
           html.classList.remove("dark");
           html.classList.add("light");
           button.innerHTML = "Dark Mode";
+          localStorage.setItem("theme", "light");
         } else {
           html.classList.remove("light");
           html.classList.add("dark");
           button.innerHTML = "Light Mode";
+          localStorage.setItem("theme", "dark");
         }
       }
 
@@ -528,6 +629,24 @@
 
       // Load saved theme on page load
       loadTheme();
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("hamburger-btn");
+        const icon = document.getElementById("hamburger-icon");
+        const isOpen = !menu.classList.contains("hidden");
+
+        if (isOpen) {
+          menu.classList.add("hidden");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          menu.classList.remove("hidden");
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      }
     </script>
   </body>
 </html>

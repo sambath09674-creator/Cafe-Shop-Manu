@@ -55,7 +55,9 @@
     <!-- <div class="bg-gradient-to-b from-gradStart to-gradEnd"> -->
     <div class="mx-auto px-6 pt-8 pb-4 md:px-12 lg:px-20">
       <!-- Navbar -->
-      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+      <nav
+        class="mb-14 flex flex-wrap items-center justify-between gap-5 relative"
+      >
         <div class="flex items-center gap-2.5">
           <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
           <h2 class="text-2xl font-semibold text-espresso dark:text-cream">
@@ -63,7 +65,8 @@
           </h2>
         </div>
 
-        <ul class="flex list-none items-center gap-4">
+        <!-- Desktop nav links -->
+        <ul class="hidden md:flex list-none items-center gap-4">
           <li>
             <a
               href="./index.html"
@@ -87,13 +90,55 @@
           </li>
         </ul>
 
-        <button
-          onclick="toggleDarkMode()"
-          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+        <div class="flex items-center gap-3">
+          <!-- Dark mode button: icon only on small screens, full on md+ -->
+          <button
+            onclick="toggleDarkMode()"
+            class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-4 py-3 md:px-6 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-mug-hot"></i>
+            <span class="hidden md:inline">Dark Mode</span>
+          </button>
+
+          <!-- Hamburger button: mobile only -->
+          <button
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            id="hamburger-btn"
+            class="md:hidden cursor-pointer rounded-lg border-2 border-espresso bg-transparent p-3 text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <ul
+          id="mobile-menu"
+          class="hidden md:hidden absolute left-0 right-0 top-full mt-2 flex list-none flex-col gap-1 rounded-xl border border-espresso/10 bg-[#f5ebd4] p-3 shadow-lg dark:border-cream/10 dark:bg-espresso z-50"
         >
-          <i class="fa-solid fa-mug-hot"></i>
-          Dark Mode
-        </button>
+          <li>
+            <a
+              href="./index.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./html/cafe_hub.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="./html/our.story.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Our Story</a
+            >
+          </li>
+        </ul>
       </nav>
 
       <!-- Hero content -->
@@ -204,7 +249,7 @@
           </div>
 
           <a
-            href="#"
+            href="./html/cafe_hub.html"
             class="inline-block rounded-lg bg-[#9c6c4c] px-9 py-3.5 text-base font-bold tracking-wide text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#865b3e]"
           >
             $14 | Order Today
@@ -239,7 +284,6 @@
 
     <section
       class="bg-[#fcfbfa] bg-repeat bg-[length:350px] bg-center px-6 py-20 md:px-16 lg:px-20 dark:bg-espressoDeep"
-      style="background-image: url(&quot;../pic/Untitled-1.png&quot;)"
     >
       <div
         class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 text-center md:grid-cols-[1.2fr_0.8fr] md:text-left"
@@ -263,8 +307,8 @@
             just for you.
           </p>
           <a
-            href="#"
-            class="inline-flex items-center gap-3 rounded bg-darkBanner px-9 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-espressoDeep"
+            href="./html/cafe_hub.html"
+            class="inline-flex items-center gap-3 rounded bg-darkBanner dark:bg-cream px-9 py-3.5 text-sm font-semibold text-white dark:text-black transition hover:-translate-y-0.5 hover:bg-espressoDeep"
           >
             Order Now <i class="fa-solid fa-cart-shopping"></i>
           </a>
@@ -279,6 +323,8 @@
         </div>
       </div>
     </section>
+    <!-- line when dark -->
+    <div class="h-1 bg-cream dark:bg-black"></div>
     <!-- ============ STORY MOSAIC ============ -->
     <section class="bg-cream px-6 py-24 md:px-16 lg:px-20 dark:bg-espressoDeep">
       <div
@@ -328,13 +374,13 @@
           <p
             class="mb-10 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
           >
-            the Tavern Coffee is a nonprofit cafe where strong coffee fuels
+            The Tavern Coffee is a nonprofit cafe where strong coffee fuels
             second chances. We're creating jobs, builing community, and serving
             hope daily in the heart of Buckeye.
           </p>
           <a
-            href="#"
-            class="inline-block rounded-md bg-darkBanner px-10 py-3.5 text-base font-medium text-white transition hover:-translate-y-0.5 hover:bg-espressoDeep"
+            href="./html/our.story.html"
+            class="inline-block rounded-md bg-darkBanner dark:bg-cream px-10 py-3.5 text-base font-medium text-white dark:text-black transition hover:-translate-y-0.5 hover:bg-espressoDeep"
           >
             Read our story &rarr;
           </a>
@@ -385,21 +431,31 @@
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="home.html" class="hover:text-caramel">Home</a>
-          <a href="our.story.html" class="hover:text-caramel">Our story</a>
-          <a href="#" class="hover:text-caramel">Mission</a>
-          <a href="#" class="hover:text-caramel">Vision</a>
-          <a href="#" class="hover:text-caramel">Values</a>
-          <a href="#" class="hover:text-caramel">Pay it forward</a>
+          <a href="./index.html" class="hover:text-caramel">Home</a>
+          <a href="./html/our.story.html" class="hover:text-caramel"
+            >Our story</a
+          >
+          <a href="./html/our.story.html" class="hover:text-caramel">Mission</a>
+          <a href="./html/our.story.html" class="hover:text-caramel">Vision</a>
+          <a href="./html/cafe_hub.html" class="hover:text-caramel">Values</a>
+          <a href="./html/cafe_hub.html" class="hover:text-caramel"
+            >Pay it forward</a
+          >
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
-          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
-          <a href="#" class="hover:text-caramel">Tavern merch</a>
-          <a href="#" class="hover:text-caramel">Host an event</a>
-          <a href="#" class="hover:text-caramel">The drip</a>
-          <a href="#" class="hover:text-caramel">Donate</a>
+          <a href="./html/cafe_hub.html" class="hover:text-caramel"
+            >Order online</a
+          >
+          <a href="./html/cafe_hub.html" class="hover:text-caramel"
+            >Full menu</a
+          >
+          <a href="./html/our.story.html" class="hover:text-caramel"
+            >Tavern merch</a
+          >
+          <!-- <a href="#" class="hover:text-caramel">Host an event</a> -->
+          <!-- <a href="#" class="hover:text-caramel">The drip</a> -->
+          <!-- <a href="#" class="hover:text-caramel">Donate</a> -->
         </div>
 
         <div class="max-w-xs text-sm leading-relaxed text-gray-300">
@@ -438,10 +494,12 @@
           html.classList.remove("dark");
           html.classList.add("light");
           button.innerHTML = "Dark Mode";
+          localStorage.setItem("theme", "light");
         } else {
           html.classList.remove("light");
           html.classList.add("dark");
           button.innerHTML = "Light Mode";
+          localStorage.setItem("theme", "dark");
         }
       }
 
@@ -457,6 +515,24 @@
 
       // Load saved theme on page load
       loadTheme();
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("hamburger-btn");
+        const icon = document.getElementById("hamburger-icon");
+        const isOpen = !menu.classList.contains("hidden");
+
+        if (isOpen) {
+          menu.classList.add("hidden");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          menu.classList.remove("hidden");
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      }
     </script>
   </body>
 </html>

@@ -53,7 +53,9 @@
   >
     <div class="px-6 py-8 md:px-12 lg:px-20">
       <!-- Navbar -->
-      <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
+      <nav
+        class="mb-14 flex flex-wrap items-center justify-between gap-5 relative"
+      >
         <div class="flex items-center gap-2.5">
           <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
           <h2 class="text-2xl font-semibold text-espresso dark:text-cream">
@@ -61,37 +63,80 @@
           </h2>
         </div>
 
-        <ul class="flex list-none items-center gap-4">
+        <!-- Desktop nav links -->
+        <ul class="hidden md:flex list-none items-center gap-4">
           <li>
             <a
-              href="../index.html"
+              href="./index.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="./cafe_hub.html"
+              href="./html/cafe_hub.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Coffee Hub</a
             >
           </li>
           <li>
             <a
-              href="./our.story.html"
+              href="./html/our.story.html"
               class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Our Story</a
             >
           </li>
         </ul>
 
-        <button
-          onclick="toggleDarkMode()"
-          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+        <div class="flex items-center gap-3">
+          <!-- Dark mode button: icon only on small screens, full on md+ -->
+          <button
+            onclick="toggleDarkMode()"
+            class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-4 py-3 md:px-6 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-mug-hot"></i>
+            <span class="hidden md:inline">Dark Mode</span>
+          </button>
+
+          <!-- Hamburger button: mobile only -->
+          <button
+            onclick="toggleMobileMenu()"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            id="hamburger-btn"
+            class="md:hidden cursor-pointer rounded-lg border-2 border-espresso bg-transparent p-3 text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+          >
+            <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <ul
+          id="mobile-menu"
+          class="hidden md:hidden absolute left-0 right-0 top-full mt-2 flex list-none flex-col gap-1 rounded-xl border border-espresso/10 bg-[#f5ebd4] p-3 shadow-lg dark:border-cream/10 dark:bg-espresso z-50"
         >
-          <i class="fa-solid fa-mug-hot"></i>
-          Dark Mode
-        </button>
+          <li>
+            <a
+              href="../index.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/cafe_hub.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Coffee Hub</a
+            >
+          </li>
+          <li>
+            <a
+              href="../html/our.story.html"
+              class="block rounded-lg px-5 py-3 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
+              >Our Story</a
+            >
+          </li>
+        </ul>
       </nav>
 
       <!-- Hero -->
@@ -126,8 +171,8 @@
           </p>
 
           <a
-            href="#"
-            class="inline-flex mb-20 items-center gap-3 rounded-full bg-btnDark px-6 py-3 text-sm font-medium text-white shadow-md transition hover:-translate-y-0.5"
+            href="../html/cafe_hub.html"
+            class="inline-flex mb-20 items-center gap-3 rounded-full bg-btnDark dark:bg-accent px-6 py-3 text-sm font-medium text-white shadow-md transition hover:-translate-y-0.5"
           >
             Order Now <i class="fa-solid fa-cart-shopping"></i>
           </a>
@@ -168,6 +213,8 @@
           />
         </div>
       </main>
+      <!-- line -->
+      <div class="h-0.5 mt-16 bg-caramel"></div>
       <!-- banner
       <div
         class="flex flex-col mt-16 items-center justify-around gap-3 bg-darkBanner px-20 py-7 text-center text-white md:flex-row"
@@ -183,7 +230,7 @@
 
       <!-- Menu tabs -->
       <section class="mt-16 text-center md:text-left">
-        <h2 class="mb-6 text-2xl font-semibold">Our Menu</h2>
+        <h2 class="mb-6 text-5xl font-semibold">Our Menu</h2>
         <div class="flex flex-wrap justify-center gap-6 md:justify-start">
           <button
             class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-semibold text-espresso shadow dark:bg-espressoDeep dark:text-cream"
@@ -216,7 +263,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -236,11 +283,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -258,7 +305,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -278,11 +325,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -300,7 +347,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -320,11 +367,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -342,7 +389,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -362,11 +409,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -394,7 +441,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -414,11 +461,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -436,7 +483,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -457,11 +504,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -479,7 +526,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -500,11 +547,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -522,7 +569,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -543,11 +590,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -565,7 +612,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -586,11 +633,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -608,7 +655,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -629,11 +676,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -651,7 +698,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.9 ★</span
               >
               <img
@@ -672,11 +719,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -704,7 +751,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -725,11 +772,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -747,7 +794,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -768,11 +815,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -790,7 +837,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -811,11 +858,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -833,7 +880,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -854,11 +901,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -876,7 +923,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -897,11 +944,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -919,7 +966,7 @@
           >
             <div class="relative h-40 overflow-hidden rounded-2xl">
               <span
-                class="absolute left-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-xs font-bold"
+                class="absolute left-2 top-2 rounded-full bg-white/90 dark:bg-accent px-2 py-0.5 text-xs font-bold"
                 >4.8 ★</span
               >
               <img
@@ -939,11 +986,11 @@
               <div class="mt-2 flex items-center justify-between">
                 <div class="flex gap-1.5">
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Hot</span
                   >
                   <span
-                    class="rounded-full bg-white px-2.5 py-0.5 text-xs font-semibold"
+                    class="rounded-full bg-white dark:bg-accent px-2.5 py-0.5 text-xs font-semibold"
                     >Ice</span
                   >
                 </div>
@@ -964,7 +1011,7 @@
           <h3 class="mb-6 text-lg font-bold tracking-wide">CUSTOMER REVIEWS</h3>
           <div class="grid grid-cols-1 gap-6">
             <div
-              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div class="mb-2 text-accent">★★★★★</div>
               <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
@@ -980,7 +1027,7 @@
               </div>
             </div>
             <div
-              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div class="mb-2 text-accent">★★★★★</div>
               <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
@@ -996,7 +1043,7 @@
               </div>
             </div>
             <div
-              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div class="mb-2 text-accent">★★★★★</div>
               <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
@@ -1018,7 +1065,7 @@
           <h3 class="mb-6 text-lg font-bold tracking-wide">WHY CHOOSE US?</h3>
           <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="flex items-start gap-4 rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
@@ -1033,7 +1080,7 @@
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="flex items-start gap-4 rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
@@ -1048,7 +1095,7 @@
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="flex items-start gap-4 rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
@@ -1063,7 +1110,7 @@
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+              class="flex items-start gap-4 rounded-2xl bg-white dark:bg-accent p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
                 class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
@@ -1124,21 +1171,33 @@
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="home.html" class="hover:text-caramel">Home</a>
-          <a href="our.story.html" class="hover:text-caramel">Our story</a>
-          <a href="#" class="hover:text-caramel">Mission</a>
-          <a href="#" class="hover:text-caramel">Vision</a>
-          <a href="#" class="hover:text-caramel">Values</a>
-          <a href="#" class="hover:text-caramel">Pay it forward</a>
+          <a href="../index.html" class="hover:text-caramel">Home</a>
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Our story</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Mission</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel">Vision</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel">Values</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Pay it forward</a
+          >
         </div>
 
         <div class="flex min-w-[160px] flex-col gap-2 text-sm text-gray-300">
-          <a href="cafe_hub.html" class="hover:text-caramel">Order online</a>
-          <a href="cafe_hub.html" class="hover:text-caramel">Full menu</a>
-          <a href="#" class="hover:text-caramel">Tavern merch</a>
-          <a href="#" class="hover:text-caramel">Host an event</a>
-          <a href="#" class="hover:text-caramel">The drip</a>
-          <a href="#" class="hover:text-caramel">Donate</a>
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Order online</a
+          >
+          <a href="../html/cafe_hub.html" class="hover:text-caramel"
+            >Full menu</a
+          >
+          <a href="../html/our.story.html" class="hover:text-caramel"
+            >Tavern merch</a
+          >
+          <!-- <a href="#" class="hover:text-caramel">Host an event</a> -->
+          <!-- <a href="#" class="hover:text-caramel">The drip</a> -->
+          <!-- <a href="#" class="hover:text-caramel">Donate</a> -->
         </div>
 
         <div class="max-w-xs text-sm leading-relaxed text-gray-300">
@@ -1177,10 +1236,12 @@
           html.classList.remove("dark");
           html.classList.add("light");
           button.innerHTML = "Dark Mode";
+          localStorage.setItem("theme", "light");
         } else {
           html.classList.remove("light");
           html.classList.add("dark");
           button.innerHTML = "Light Mode";
+          localStorage.setItem("theme", "dark");
         }
       }
 
@@ -1196,6 +1257,24 @@
 
       // Load saved theme on page load
       loadTheme();
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("hamburger-btn");
+        const icon = document.getElementById("hamburger-icon");
+        const isOpen = !menu.classList.contains("hidden");
+
+        if (isOpen) {
+          menu.classList.add("hidden");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          menu.classList.remove("hidden");
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      }
     </script>
   </body>
 </html>

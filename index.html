@@ -19,6 +19,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
@@ -47,7 +48,9 @@
       };
     </script>
   </head>
-  <body class="font-sans text-espresso bg-cream">
+  <body
+    class="font-sans text-espresso bg-cream dark:text-cream dark:bg-espressoDeep"
+  >
     <!-- ============ HERO (gradient wrapper) ============ -->
     <!-- <div class="bg-gradient-to-b from-gradStart to-gradEnd"> -->
     <div class="mx-auto px-6 pt-8 pb-4 md:px-12 lg:px-20">
@@ -55,38 +58,41 @@
       <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
         <div class="flex items-center gap-2.5">
           <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
-          <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
+          <h2 class="text-2xl font-semibold text-espresso dark:text-cream">
+            Smokey Brand
+          </h2>
         </div>
 
         <ul class="flex list-none items-center gap-4">
           <li>
             <a
               href="./index.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Home</a
             >
           </li>
           <li>
             <a
               href="./html/cafe_hub.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Coffee Hub</a
             >
           </li>
           <li>
             <a
               href="./html/our.story.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Our Story</a
             >
           </li>
         </ul>
 
         <button
-          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white"
+          onclick="toggleDarkMode()"
+          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
         >
           <i class="fa-solid fa-mug-hot"></i>
-          Your Basket
+          Dark Mode
         </button>
       </nav>
 
@@ -112,7 +118,7 @@
           <div class="flex flex-wrap justify-center gap-5 lg:justify-start">
             <a
               href="./html/cafe_hub.html"
-              class="inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+              class="inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg dark:bg-cream dark:text-espresso"
             >
               <span></span> Shop Beans
             </a>
@@ -232,7 +238,7 @@
     </section> -->
 
     <section
-      class="bg-[#fcfbfa] bg-repeat bg-[length:350px] bg-center px-6 py-20 md:px-16 lg:px-20"
+      class="bg-[#fcfbfa] bg-repeat bg-[length:350px] bg-center px-6 py-20 md:px-16 lg:px-20 dark:bg-espressoDeep"
       style="background-image: url(&quot;../pic/Untitled-1.png&quot;)"
     >
       <div
@@ -243,11 +249,13 @@
             >Baked Goods, Pastries &amp; Sandwiches</span
           >
           <h2
-            class="mb-8 font-serif text-3xl font-normal leading-snug text-[#332724] md:text-[2.8rem]"
+            class="mb-8 font-serif text-3xl font-normal leading-snug text-[#332724] md:text-[2.8rem] dark:text-cream"
           >
             Better Together : The Tavern X Hunny Bunny's Bakery
           </h2>
-          <p class="mb-10 text-base leading-relaxed text-gray-600">
+          <p
+            class="mb-10 text-base leading-relaxed text-gray-600 dark:text-gray-300"
+          >
             Every pastry we serve is handcrafted by Hunny Bakery, a local gem
             we're proud to support. It's sweet partnership that supports local
             bussiness and builds up Buckeye-one bite at a time. It's more than a
@@ -272,7 +280,7 @@
       </div>
     </section>
     <!-- ============ STORY MOSAIC ============ -->
-    <section class="bg-cream px-6 py-24 md:px-16 lg:px-20">
+    <section class="bg-cream px-6 py-24 md:px-16 lg:px-20 dark:bg-espressoDeep">
       <div
         class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-[1.1fr_0.9fr]"
       >
@@ -298,7 +306,7 @@
             />
           </div>
           <div
-            class="absolute bottom-0 left-[45%] z-30 h-1/2 w-[48%] overflow-hidden rounded-xl border-[6px] border-cream shadow-lg"
+            class="absolute bottom-0 left-[45%] z-30 h-1/2 w-[48%] overflow-hidden rounded-xl border-[6px] border-cream shadow-lg dark:border-espressoDeep"
           >
             <img
               src="../pic/k-50-t-35545454531.webp"
@@ -310,14 +318,16 @@
 
         <div class="text-center md:text-left">
           <h2
-            class="mb-8 font-serif text-3xl font-normal leading-tight tracking-tight text-[#332724] md:text-[3.2rem]"
+            class="mb-8 font-serif text-3xl font-normal leading-tight tracking-tight text-[#332724] md:text-[3.2rem] dark:text-cream"
           >
             Repurposed.<br />
             Reimagined.<br />
             Reigniting Buckeye<br />
             -One cup at a time.
           </h2>
-          <p class="mb-10 text-lg leading-relaxed text-gray-600">
+          <p
+            class="mb-10 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+          >
             the Tavern Coffee is a nonprofit cafe where strong coffee fuels
             second chances. We're creating jobs, builing community, and serving
             hope daily in the heart of Buckeye.
@@ -418,5 +428,35 @@
         </p>
       </div>
     </footer>
+    <!-- Inject js-->
+    <script>
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        const button = document.querySelector("button");
+
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          html.classList.add("light");
+          button.innerHTML = "Dark Mode";
+        } else {
+          html.classList.remove("light");
+          html.classList.add("dark");
+          button.innerHTML = "Light Mode";
+        }
+      }
+
+      // Optional: Save user preference
+      function loadTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+          document.querySelector("button").innerHTML = "Light Mode";
+        }
+      }
+
+      // Load saved theme on page load
+      loadTheme();
+    </script>
   </body>
 </html>

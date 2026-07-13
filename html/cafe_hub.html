@@ -19,6 +19,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
@@ -47,44 +48,49 @@
       };
     </script>
   </head>
-  <body class="bg-cream font-sans text-espresso">
+  <body
+    class="bg-cream font-sans text-espresso dark:bg-espressoDeep dark:text-cream"
+  >
     <div class="px-6 py-8 md:px-12 lg:px-20">
       <!-- Navbar -->
       <nav class="mb-14 flex flex-wrap items-center justify-between gap-5">
         <div class="flex items-center gap-2.5">
           <i class="fa-solid fa-seedling text-3xl text-walnut"></i>
-          <h2 class="text-2xl font-semibold text-espresso">Smokey Brand</h2>
+          <h2 class="text-2xl font-semibold text-espresso dark:text-cream">
+            Smokey Brand
+          </h2>
         </div>
 
         <ul class="flex list-none items-center gap-4">
           <li>
             <a
               href="../index.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Home</a
             >
           </li>
           <li>
             <a
               href="./cafe_hub.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Coffee Hub</a
             >
           </li>
           <li>
             <a
               href="./our.story.html"
-              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4]"
+              class="block rounded-lg px-5 py-2 text-base font-medium text-espresso no-underline transition hover:bg-espresso hover:text-[#f5ebd4] dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
               >Our Story</a
             >
           </li>
         </ul>
 
         <button
-          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white"
+          onclick="toggleDarkMode()"
+          class="cursor-pointer rounded-full border-2 border-espresso bg-transparent px-6 py-3 text-base font-semibold text-espresso transition hover:bg-espresso hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-espresso"
         >
           <i class="fa-solid fa-mug-hot"></i>
-          Your Basket
+          Dark Mode
         </button>
       </nav>
 
@@ -103,7 +109,11 @@
             BEFORE YOUR ACTIVITY
           </h1> -->
           <h1 class="mb-2 mt-16 text-2xl font-medium opacity-90">Enjoy Your</h1>
-          <span class="text-accent font-serif text-6xl font-black leading-none tracking-widest md:text-8xl"> COFFEE </span><br />
+          <span
+            class="text-accent font-serif text-6xl font-black leading-none tracking-widest md:text-8xl"
+          >
+            COFFEE </span
+          ><br />
           <h1 class="mb-2 mt-2 text-2xl font-black opacity-90">
             BEFORE YOUR ACTIVITY
           </h1>
@@ -176,17 +186,17 @@
         <h2 class="mb-6 text-2xl font-semibold">Our Menu</h2>
         <div class="flex flex-wrap justify-center gap-6 md:justify-start">
           <button
-            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-semibold text-espresso shadow"
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-semibold text-espresso shadow dark:bg-espressoDeep dark:text-cream"
           >
             <i class="fa-solid fa-mug-saucer text-[#a47e65]"></i> Coffee
           </button>
           <button
-            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm"
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm dark:bg-espressoDeep dark:text-gray-300"
           >
             <i class="fa-solid fa-blender text-[#a47e65]"></i> Matcha
           </button>
           <button
-            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm"
+            class="flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-medium text-gray-600 shadow-sm dark:bg-espressoDeep dark:text-gray-300"
           >
             <i class="fa-solid fa-bread-slice text-[#a47e65]"></i> Crosong
           </button>
@@ -195,7 +205,9 @@
 
       <!-- Coffee Menu -->
       <section class="mt-16">
-        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+        <h2
+          class="mb-8 font-slab text-2xl tracking-wide text-btnDark dark:text-cream"
+        >
           COFFEE MENU
         </h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -371,7 +383,9 @@
 
       <!-- Matcha Menu -->
       <section class="mt-16">
-        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+        <h2
+          class="mb-8 font-slab text-2xl tracking-wide text-btnDark dark:text-cream"
+        >
           MATCHA MENU
         </h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -679,7 +693,9 @@
 
       <!-- Pastries -->
       <section class="mt-16">
-        <h2 class="mb-8 font-slab text-2xl tracking-wide text-btnDark">
+        <h2
+          class="mb-8 font-slab text-2xl tracking-wide text-btnDark dark:text-cream"
+        >
           PASTRIES
         </h2>
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -947,9 +963,11 @@
         <div>
           <h3 class="mb-6 text-lg font-bold tracking-wide">CUSTOMER REVIEWS</h3>
           <div class="grid grid-cols-1 gap-6">
-            <div class="rounded-2xl bg-white p-5 shadow-sm">
+            <div
+              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+            >
               <div class="mb-2 text-accent">★★★★★</div>
-              <p class="mb-4 text-sm italic text-gray-700">
+              <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
                 "The best coffee I've ever had! Absolutely amazing taste."
               </p>
               <div class="flex items-center gap-3">
@@ -961,9 +979,11 @@
                 <span class="text-sm font-semibold">—John D.</span>
               </div>
             </div>
-            <div class="rounded-2xl bg-white p-5 shadow-sm">
+            <div
+              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+            >
               <div class="mb-2 text-accent">★★★★★</div>
-              <p class="mb-4 text-sm italic text-gray-700">
+              <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
                 Fast delivery and great service. Highly recommended! (TM)
               </p>
               <div class="flex items-center gap-3">
@@ -975,9 +995,11 @@
                 <span class="text-sm font-semibold">—Sarah M.</span>
               </div>
             </div>
-            <div class="rounded-2xl bg-white p-5 shadow-sm">
+            <div
+              class="rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
+            >
               <div class="mb-2 text-accent">★★★★★</div>
-              <p class="mb-4 text-sm italic text-gray-700">
+              <p class="mb-4 text-sm italic text-gray-700 dark:text-gray-300">
                 "My favorite place to order coffee. Love it!"
               </p>
               <div class="flex items-center gap-3">
@@ -996,61 +1018,61 @@
           <h3 class="mb-6 text-lg font-bold tracking-wide">WHY CHOOSE US?</h3>
           <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
               >
                 <i class="fa-solid fa-seedling"></i>
               </div>
               <div>
                 <h4 class="font-semibold">Premium Beans</h4>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600 dark:text-gray-300">
                   We use the best quality coffee beans.
                 </p>
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
               >
                 <i class="fa-solid fa-truck"></i>
               </div>
               <div>
                 <h4 class="font-semibold">Fast Delivery</h4>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600 dark:text-gray-300">
                   Get your coffee delivered fast.
                 </p>
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
               >
                 <i class="fa-solid fa-star"></i>
               </div>
               <div>
                 <h4 class="font-semibold">Best Quality</h4>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600 dark:text-gray-300">
                   Quality is our first priority.
                 </p>
               </div>
             </div>
             <div
-              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm"
+              class="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm dark:bg-espressoDeep"
             >
               <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream text-lg text-accent dark:bg-espresso"
               >
                 <i class="fa-solid fa-heart"></i>
               </div>
               <div>
                 <h4 class="font-semibold">Made with Love</h4>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600 dark:text-gray-300">
                   Every cup is made with passion.
                 </p>
               </div>
@@ -1145,5 +1167,35 @@
         </p>
       </div>
     </footer>
+    <!-- Inject js -->
+    <script>
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        const button = document.querySelector("button");
+
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          html.classList.add("light");
+          button.innerHTML = "Dark Mode";
+        } else {
+          html.classList.remove("light");
+          html.classList.add("dark");
+          button.innerHTML = "Light Mode";
+        }
+      }
+
+      // Optional: Save user preference
+      function loadTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+          document.querySelector("button").innerHTML = "Light Mode";
+        }
+      }
+
+      // Load saved theme on page load
+      loadTheme();
+    </script>
   </body>
 </html>
